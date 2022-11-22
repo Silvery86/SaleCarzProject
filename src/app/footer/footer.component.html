@@ -1,0 +1,38 @@
+<div class="container row">
+  <div class="info col-3">
+    <img src="assets/salecarz_logo.jpg" alt="Logo"/>
+    <p> Sale Carz Limited Company</p>
+    <fa-icon [icon]="faTwitter"></fa-icon>
+    <fa-icon [icon]="faFacebook"></fa-icon>
+    <fa-icon [icon]="faYoutube"></fa-icon>
+    <fa-icon [icon]="faInstargram"></fa-icon>
+  </div>
+  <div class="contact col-3">
+    <h5>Contact</h5>
+    <fa-icon [icon]="faLocation"></fa-icon><span>Km 9, HaNoi, VietNam</span>
+    <br>
+    <fa-icon [icon]="faEnvelop"></fa-icon><span (click)="mailMe()"><a [href]="mailText"><span>Salecarz@ltd.com.vn</span></a></span>
+  </div>
+  <div class="gps col-3">
+    <h5>Location</h5>
+
+  </div>
+  <div class="newsletter col-3">
+    <h5>Newsletter</h5>
+    <p>Subcribe our newsletter to get our latest update & news.</p>
+    <form #emailsend = "ngForm" (ngSubmit) = "onClickSubmit(emailsend.value)">
+      <input type="email" placeholder="Email Address" name="emailid" ngModel [email]="true">
+      <button type="submit" value = "submit"><fa-icon [icon]="faNewsletter"></fa-icon></button>
+
+    </form>
+
+    <br>
+
+    <fa-icon [icon]="faPhone"></fa-icon>
+    <a href="tel:+1800-5555">Call 1800-5555</a>
+    <p>Call to Our Experts</p>
+
+  </div>
+</div>
+
+

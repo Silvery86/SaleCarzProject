@@ -1,0 +1,51 @@
+.container .top-page-left{
+  color: #827a7a;
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  height:50px;
+  font-size: 20px;
+  background-color: rgba(0, 17, 61, 0.82);
+}
+.container .top-page-right{
+  color: #827a7a;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 10px;
+  height:50px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 25px;
+  background-color: rgba(0, 17, 61, 0.82);
+}
+p{
+  margin-left: 20px;
+}
+.FAQ{
+  width:40%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 30px;
+
+}
+fa-icon{
+  font-size: 25px;
+  color: #fcf7f7;
+  margin-left: 30px;
+}
+.socialmedia{
+  width:50%;
+  margin-left:20px;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+a{
+  color: #827a7a;
+}
+.top-page-left fa-icon{
+  color:dodgerblue;
+}
