@@ -7,12 +7,12 @@ img{
   padding:10px;
 }
 .logo{
-  width:15%;
+  width:20%;
   box-sizing: border-box;
   float:left;
 }
 .menu{
-  width: 60%;
+  width: 50%;
   box-sizing: border-box;
   float:left;
   margin-top:40px;
@@ -23,7 +23,7 @@ img{
   background-color: rgba(0, 17, 61, 0.96);
 }
 .contact{
-  width:calc(25% - 30px);
+  width:calc(30% - 30px);
   margin:40px 15px;
   float:left;
 }

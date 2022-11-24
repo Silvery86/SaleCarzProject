@@ -1,0 +1,22 @@
+.iproduct{
+  border-radius: 10px;
+  box-shadow: grey 1px 1px;
+  border: grey solid 1px;
+  margin: 20px 10px;
+  text-align: center;
+}
+.iproduct img{
+  border-radius: 10px;
+}
+.iproduct h2{
+  color:blue;
+  font-size: 25px;
+}
+.iproduct h5{
+  color: grey;
+  font-size: 15px;
+}
+.iproduct p{
+  color: red;
+  font-size: 15px;
+}

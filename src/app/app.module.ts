@@ -15,11 +15,21 @@ import {MdbDropdownModule} from "mdb-angular-ui-kit/dropdown";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {BannerComponent} from './banner/banner.component';
 import {NgImageSliderModule} from "ng-image-slider";
+import {MdbCarouselModule} from "mdb-angular-ui-kit/carousel";
+import { InsuranceproductComponent } from './insuranceproduct/insuranceproduct.component';
+import { InsurancedetailComponent } from './insurancedetail/insurancedetail.component';
+import { ContactComponent } from './contact/contact.component';
+import { GetquoteComponent } from './getquote/getquote.component';
+import {AngularPaginatorModule} from "angular-paginator";
 
 
 const appRoute: Routes = [
   {path:'',component:HomepageComponent},
   {path:'aboutus',component:AboutusComponent},
+  {path:'contact',component:ContactComponent},
+  {path:'getquote',component:GetquoteComponent},
+  {path:'products',component:InsuranceproductComponent},
+  {path:'productdetail',component:InsurancedetailComponent},
 ]
 
 
@@ -34,13 +44,17 @@ const appRoute: Routes = [
     NavigatorComponent,
     AboutusComponent,
     BannerComponent,
+    InsuranceproductComponent,
+    InsurancedetailComponent,
+    ContactComponent,
+    GetquoteComponent,
 
   ],
   imports: [
     BrowserModule, RouterModule.forRoot(appRoute),
     FontAwesomeModule, FontAwesomeModule,
     FormsModule, MdbCollapseModule, MdbDropdownModule,
-    NgbModule, NgImageSliderModule,
+    NgbModule, NgImageSliderModule, MdbCarouselModule, AngularPaginatorModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

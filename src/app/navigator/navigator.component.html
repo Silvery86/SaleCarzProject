@@ -4,33 +4,25 @@
       <img src="assets/salecarz_logo.jpg" alt="Logo"/>
     </div>
     <div class="menu">
-      <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-opacity-80">
-        <!-- Container wrapper -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-          <!-- Navbar brand -->
-          <a class="navbar-brand" href="#">Home</a>
-
-          <!-- Toggle button -->
+          <a class="navbar-brand nav-link" routerLink="">Home</a>
           <button
             class="navbar-toggler"
             type="button"
-            (click)="basicNavbar.toggle()"
+            (click)="basicNav.toggle()"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
             <i class="fas fa-bars"></i>
           </button>
-
-          <!-- Collapsible wrapper -->
           <div
             class="collapse navbar-collapse"
-            id="navbarSupportedContent"
+            id="navbarNav"
             mdbCollapse
-            #basicNavbar="mdbCollapse"
+            #basicNav="mdbCollapse"
           >
-            <!-- Left links -->
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav">
               <div ngbDropdown class="dropdown">
                 <button
                   class="btn btn-primary dropdown-toggle bg-opacity-80 border-dark"
@@ -39,12 +31,11 @@
                   aria-expanded="false"
                   ngbDropdownToggle
                 >
-                  Companies
+                  Insurance
                 </button>
                 <ul ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <li><a ngbDropdownItem class="dropdown-item" href="#">Action</a></li>
-                  <li><a ngbDropdownItem class="dropdown-item" href="#">Another action</a></li>
-                  <li><a ngbDropdownItem class="dropdown-item" href="#">Something else here</a></li>
+                  <li><a ngbDropdownItem class="dropdown-item" routerLink="products">Car Insurance</a></li>
+                  <li><a ngbDropdownItem class="dropdown-item" routerLink="products">Motobike Insurance</a></li>
                 </ul>
               </div>
               <div ngbDropdown class="dropdown">
@@ -55,42 +46,22 @@
                   aria-expanded="false"
                   ngbDropdownToggle
                 >
-                  Vehicles
+                  Companies
                 </button>
                 <ul ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <li><a ngbDropdownItem class="dropdown-item" href="#">Action</a></li>
-                  <li><a ngbDropdownItem class="dropdown-item" href="#">Another action</a></li>
-                  <li><a ngbDropdownItem class="dropdown-item" href="#">Something else here</a></li>
+                  <li><a ngbDropdownItem class="dropdown-item" href="#">PVI</a></li>
                 </ul>
               </div>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Shop</a>
+                <a class="nav-link active" aria-current="page" routerLink="contact">Contact</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">AboutUs</a>
+                <a class="nav-link active" aria-current="page" routerLink="aboutus">AboutUs</a>
               </li>
-
             </ul>
-            <!-- Left links -->
-
-            <!-- Search form -->
-            <form class="d-flex input-group w-auto">
-              <input
-                type="search"
-                class="form-control"
-                placeholder="Search..."
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-primary" type="button">
-                Search
-              </button>
-            </form>
           </div>
-          <!-- Collapsible wrapper -->
         </div>
-        <!-- Container wrapper -->
       </nav>
-      <!-- Navbar -->
     </div>
     <div class="contact">
       <fa-icon [icon]="faPhone"></fa-icon>
