@@ -1,22 +1,84 @@
-.iproduct{
-  border-radius: 10px;
-  box-shadow: grey 1px 1px;
+* {
+  box-sizing: border-box;
+}
+
+.main-container {
+  margin: 50px auto 0 auto;
+  width: fit-content;
+}
+
+.insurance {
+  text-align:center;
+  width: calc(25% - 20px);
   border: grey solid 1px;
-  margin: 20px 10px;
-  text-align: center;
+  box-shadow: grey 2px 2px;
+  border-radius: 10px;
+  float:left;
+  margin:10px;
 }
-.iproduct img{
+
+.name {
+   padding: 10px;
+}
+img{
   border-radius: 10px;
 }
-.iproduct h2{
-  color:blue;
-  font-size: 25px;
+.pagination-container{
+  width:100%;
+  float:left;
 }
-.iproduct h5{
-  color: grey;
-  font-size: 15px;
+.pageno-input {
+  width: 30px;
+  height: 30px;
+  margin: 0 2px;
+  border: 1px solid red;
 }
-.iproduct p{
-  color: red;
-  font-size: 15px;
+
+.pageno-input input {
+  width: 100%;
+  height: 100%;
+  background-color: lightgray;
+  display: block;
+  border: none;
+  text-align: center;
+  font-weight: bold;
+}
+
+.pagination-container {
+  margin-top: 20px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  margin: 1px;
+  min-width: 20px;
+  min-height: 30px;
+}
+
+.active-page {
+  background-color: blue;
+  color: white;
+}
+
+button,
+select {
+  cursor: pointer;
+}
+
+.search-box {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 5px;
+}
+
+select {
+  height: 30px;
 }

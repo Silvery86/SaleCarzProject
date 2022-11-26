@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-
 import {AppComponent} from './app.component';
 import {RouterModule, Routes} from "@angular/router";
 import {HomepageComponent} from './homepage/homepage.component';
@@ -12,7 +11,7 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {FormsModule} from "@angular/forms";
 import {MdbCollapseModule} from 'mdb-angular-ui-kit/collapse';
 import {MdbDropdownModule} from "mdb-angular-ui-kit/dropdown";
-import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import {NgbModule, NgbPaginationModule} from "@ng-bootstrap/ng-bootstrap";
 import {BannerComponent} from './banner/banner.component';
 import {NgImageSliderModule} from "ng-image-slider";
 import {MdbCarouselModule} from "mdb-angular-ui-kit/carousel";
@@ -20,7 +19,8 @@ import { InsuranceproductComponent } from './insuranceproduct/insuranceproduct.c
 import { InsurancedetailComponent } from './insurancedetail/insurancedetail.component';
 import { ContactComponent } from './contact/contact.component';
 import { GetquoteComponent } from './getquote/getquote.component';
-import {AngularPaginatorModule} from "angular-paginator";
+import {PaginationModule} from "@snoringarvind/pagination";
+
 
 
 const appRoute: Routes = [
@@ -29,12 +29,12 @@ const appRoute: Routes = [
   {path:'contact',component:ContactComponent},
   {path:'getquote',component:GetquoteComponent},
   {path:'products',component:InsuranceproductComponent},
-  {path:'productdetail',component:InsurancedetailComponent},
+  {path:'detail',component:InsurancedetailComponent}
 ]
 
 
 
-// @ts-ignore
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,12 +49,14 @@ const appRoute: Routes = [
     ContactComponent,
     GetquoteComponent,
 
+
   ],
   imports: [
     BrowserModule, RouterModule.forRoot(appRoute),
     FontAwesomeModule, FontAwesomeModule,
     FormsModule, MdbCollapseModule, MdbDropdownModule,
-    NgbModule, NgImageSliderModule, MdbCarouselModule, AngularPaginatorModule,
+    NgbModule, NgImageSliderModule, MdbCarouselModule,
+    PaginationModule, NgbPaginationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
