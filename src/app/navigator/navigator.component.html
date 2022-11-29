@@ -23,21 +23,9 @@
             #basicNav="mdbCollapse"
           >
             <ul class="navbar-nav">
-              <div ngbDropdown class="dropdown">
-                <button
-                  class="btn btn-primary dropdown-toggle bg-opacity-80 border-dark"
-                  type="button"
-                  id="dropdownMenuButton1"
-                  aria-expanded="false"
-                  ngbDropdownToggle
-                >
-                  Insurance
-                </button>
-                <ul ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <li><a ngbDropdownItem class="dropdown-item" routerLink="products">Car Insurance</a></li>
-                  <li><a ngbDropdownItem class="dropdown-item" routerLink="products">Motobike Insurance</a></li>
-                </ul>
-              </div>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" routerLink="products">Insurance Products</a>
+              </li>
               <div ngbDropdown class="dropdown">
                 <button
                   class="btn btn-primary dropdown-toggle border-dark"

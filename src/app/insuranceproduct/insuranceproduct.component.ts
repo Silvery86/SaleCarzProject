@@ -1,6 +1,6 @@
 import {AfterViewInit, ChangeDetectorRef, Component, OnChanges, OnInit} from '@angular/core';
 import {debounceTime, distinctUntilChanged, Observable, of, Subject, switchMap} from "rxjs";
-import {validateAndFlattenComponentImports} from "@angular/compiler-cli/src/ngtsc/annotations/component/src/util";
+
 
 
 @Component({
@@ -10,37 +10,19 @@ import {validateAndFlattenComponentImports} from "@angular/compiler-cli/src/ngts
 })
 export class InsuranceproductComponent implements OnInit, OnChanges, AfterViewInit{
   public INS =[
-    {name:'Car Insurance',com:'PVI',des:'ABCXYZ',img:'../../assets/carinsurance.png',price:10},
-    {name:'Car Insurance',com:'MIC',des:'ABCXYZ',img:'../../assets/carinsurance.png',price:9},
-    {name:'Mobike Insurance',com:'PVI',des:'ABCXYZ',img:'../../assets/carinsurance.png',price:8},
-    {name:'Motobike Insurance',com:'PVI',des:'ABCXYZ',img:'../../assets/carinsurance.png',price:13},
-    {name:'Car Insurance',com:'PVI',des:'ABCXYZ',img:'../../assets/carinsurance.png',price:12},
-    {name:'Motobike Insurance',com:'PVI',des:'ABCXYZ',img:'../../assets/carinsurance.png',price:11},
-    {name:'Motobike Insurance',com:'PVI',des:'ABCXYZ',img:'../../assets/carinsurance.png',price:14},
-    {name:'Motobike Insurance',com:'PVI',des:'ABCXYZ',img:'../../assets/carinsurance.png',price:15},
-    {name:'Motobike Insurance',com:'PVI',des:'ABCXYZ',img:'../../assets/carinsurance.png',price:16},
-    {name:'Motobike Insurance',com:'PVI',des:'ABCXYZ',img:'../../assets/carinsurance.png',price:17},
-    {name:'Motobike Insurance',com:'PVI',des:'ABCXYZ',img:'../../assets/carinsurance.png',price:18},
-    {name:'Motobike Insurance',com:'PVI',des:'ABCXYZ',img:'../../assets/carinsurance.png',price:19},
-    {name:'Motobike Insurance',com:'PVI',des:'ABCXYZ',img:'../../assets/carinsurance.png',price:20},
-    {name:'Motobike Insurance',com:'PVI',des:'ABCXYZ',img:'../../assets/carinsurance.png',price:21},
-    {name:'Motobike Insurance',com:'PVI',des:'ABCXYZ',img:'../../assets/carinsurance.png',price:22},
-    {name:'Motobike Insurance',com:'PVI',des:'ABCXYZ',img:'../../assets/carinsurance.png',price:22},
-    {name:'Motobike Insurance',com:'PVI',des:'ABCXYZ',img:'../../assets/carinsurance.png',price:22},
-    {name:'Motobike Insurance',com:'PVI',des:'ABCXYZ',img:'../../assets/carinsurance.png',price:22},
-    {name:'Motobike Insurance',com:'PVI',des:'ABCXYZ',img:'../../assets/carinsurance.png',price:22},
-    {name:'Motobike Insurance',com:'PVI',des:'ABCXYZ',img:'../../assets/carinsurance.png',price:22},
-    {name:'Motobike Insurance',com:'PVI',des:'ABCXYZ',img:'../../assets/carinsurance.png',price:22},
-    {name:'Motobike Insurance',com:'PVI',des:'ABCXYZ',img:'../../assets/carinsurance.png',price:22},
-    {name:'Motobike Insurance',com:'PVI',des:'ABCXYZ',img:'../../assets/carinsurance.png',price:22},
-    {name:'Motobike Insurance',com:'PVI',des:'ABCXYZ',img:'../../assets/carinsurance.png',price:22},
-    {name:'Motobike Insurance',com:'PVI',des:'ABCXYZ',img:'../../assets/carinsurance.png',price:22},
-    {name:'Motobike Insurance',com:'PVI',des:'ABCXYZ',img:'../../assets/carinsurance.png',price:22},
-    {name:'Motobike Insurance',com:'PVI',des:'ABCXYZ',img:'../../assets/carinsurance.png',price:22},
-    {name:'Motobike Insurance',com:'PVI',des:'ABCXYZ',img:'../../assets/carinsurance.png',price:22},
-    {name:'Motobike Insurance',com:'PVI',des:'ABCXYZ',img:'../../assets/carinsurance.png',price:22},
-    {name:'Motobike Insurance',com:'PVI',des:'ABCXYZ',img:'../../assets/carinsurance.png',price:22},
-    {name:'Motobike Insurance',com:'PVI',des:'ABCXYZ',img:'../../assets/carinsurance.png',price:22},
+    {name:'Car Insurance',com:'PVI',des:'Insurance description',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:1500.2},
+    {name:'Car Insurance',com:'MIC',des:'Insurance description',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:100.2},
+    {name:'Motobike Insurance',com:'PVI',des:'Insurance description',img:'../../assets/motobikeinsurance.jpeg', logo:'../../assets/companylogo/pvi-logo.png' ,price:1200.5},
+    {name:'Car Insurance',com:'Bao Viet',des:'Insurance description',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:1000.56},
+    {name:'Car Insurance',com:'PVI',des:'Insurance description',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:500},
+    {name:'Motobike Insurance',com:'PVI',des:'Insurance description',img:'../../assets/motobikeinsurance.jpeg', logo:'../../assets/companylogo/pvi-logo.png' ,price:1500.2},
+    {name:'Car Insurance',com:'PVI',des:'Insurance description',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:150},
+    {name:'Car Insurance',com:'PVI',des:'Insurance description',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:1500},
+    {name:'Car Insurance',com:'PVI',des:'Insurance description',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:1500},
+    {name:'Car Insurance',com:'PVI',des:'Insurance description',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:1500.2},
+    {name:'Car Insurance',com:'PVI',des:'Insurance description',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:1500.2},
+    {name:'Car Insurance',com:'PVI',des:'Insurance description',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:1500.2},
+
   ]
 
   title = 'pagination';
@@ -51,12 +33,8 @@ export class InsuranceproductComponent implements OnInit, OnChanges, AfterViewIn
   btnNosArr: number[] = [];
   rulesPerPage!: number;
   currentPage: number = 1;
-
   searchObservable!: Observable<any>;
-
-
   constructor(private cdRef: ChangeDetectorRef) {}
-
   searchTerms = new Subject<string>();
 
 

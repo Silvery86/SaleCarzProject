@@ -6,19 +6,48 @@
   margin: 50px auto 0 auto;
   width: fit-content;
 }
-
+.logo img{
+  width:120px;
+  height: 120px;
+  float:left;
+  margin: 15px 0;
+  box-shadow: grey 2px 2px;
+}
+.img img{
+  width: 120px;
+  height: 120px;
+  margin: 15px 0;
+  box-shadow: grey 2px 2px;
+}
 .insurance {
-  text-align:center;
-  width: calc(25% - 20px);
+  height:150px;
+  width:800px;
   border: grey solid 1px;
   box-shadow: grey 2px 2px;
   border-radius: 10px;
   float:left;
-  margin:10px;
+  margin:20px;
 }
-
-.name {
-   padding: 10px;
+.title{
+  text-align: center;
+  margin: 10px 0;
+}
+.name h2{
+  font-size: 25px;
+  color: dodgerblue;
+}
+.des h5{
+  font-size: 15px;
+  color: grey;
+}
+.price p{
+  color:red;
+  font-size: 15px;
+}
+.title button{
+  border-radius: 10px;
+  border:dodgerblue solid 1px;
+  padding:5px;
 }
 img{
   border-radius: 10px;
@@ -81,4 +110,20 @@ select {
 
 select {
   height: 30px;
+}
+.search-box input{
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+}
+.sidebar{
+  padding:20px;
+  margin-top: 70px;
+}
+.sidebar .filter{
+  border: grey solid 1px;
+  margin-top: 20px;
+  padding:15px;
+  box-sizing: border-box;
+  border-radius: 10px;
 }

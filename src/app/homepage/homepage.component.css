@@ -9,6 +9,7 @@
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.8);
   height:180px;
+  transition: background-color 2s;
 }
 .benefit fa-icon{
   font-size: 40px;
@@ -23,15 +24,33 @@
   text-align: center;
 }
 .benefit:hover{
-  background-color: rgba(20, 4, 88, 0.8);
-  color: ghostwhite;
+  background-color: rgba(60, 109, 241, 0.82);
+  color: rgba(248, 248, 255, 0.8);
+}
+.benefit:hover fa-icon{
+  color: rgba(255, 250, 250, 0.92);
 }
 .aboutus{
-  background-color: rgba(0, 17, 61, 0.82);
+  background-color: rgba(60, 109, 241, 0.82);
   border-radius: 10px;
   box-shadow: grey 5px 5px;
   padding: 20px 0;
   height:100%;
+}
+.aboutus .detail{
+  text-align: left;
+}
+.aboutus .detail button{
+  font-size: 20px;
+  padding:10px;
+  color: whitesmoke;
+  background-color: dodgerblue;
+  border-radius: 10px;
+  transition: background-color 2s;
+  transition-timing-function: step-start;
+}
+.aboutus .detail button:hover{
+  background-color: #073865;
 }
 .img1 img{
   width:350px;
@@ -41,24 +60,30 @@
   width:350px;
   float:left;
   border-radius: 50px;
-  translate: -20px -80px;
+  translate: -10px -80px;
 }
 .exp{
   width:150px;
   translate: 250px 250px;
 }
+.ourservices{
+  margin: 50px 0;
+}
 .ourservices-product{
   width:400px;
-  box-shadow: snow;
-  border: snow solid 1px;
+
+  border: grey solid 1px;
   margin:auto;
   border-radius: 20px;
   background-color: snow;
+
+  box-shadow: grey 1px 1px;
 }
 .ourservices-product img{
   width:400px;
   height: 300px;
   border-radius: 20px;
+  box-shadow: grey 1px 1px;
 }
 .ourservices-product fa-icon{
   font-size: 40px;
@@ -67,18 +92,21 @@
 }
 .whychose {
   margin-top:50px;
-  background-color: rgba(0, 17, 61, 0.82);
+  background-color: rgba(60, 109, 241, 0.82);
   border-radius: 10px;
   box-shadow: grey 5px 5px;
+  padding-top:20px;
+  height:600px;
+  margin-bottom: 50px;
 }
 .whychose-detail h5{
-  color:rgba(0, 102, 255, 0.91);
+
 }
 .whychose-detail h2{
-  color:whitesmoke;
+
 }
 .whychose-detail p{
-  color:grey;
+
 }
 
 .whychosse-icon{
@@ -89,27 +117,53 @@
   margin:20px;
   box-shadow: black 2px 2px;
   border-radius: 10px;
+  background-color: snow;
 }
 .whychosse-icon fa-icon{
   font-size: 45px;
-  color: rgba(0, 102, 255, 0.91);
+  color: rgba(31, 55, 173, 0.91);
 }
 .whychosse-icon .showing{
   font-size: 25px;
-  color: rgba(0, 102, 255, 0.91);
+  color: rgba(31, 55, 173, 0.91);
   margin-top: 20px;
 }
 .whychosse-icon .hidden{
   font-size: 20px;
-  color: rgba(0, 102, 255, 0.91);
+  color: rgba(31, 55, 173, 0.91);
+
   margin-top: 20px;
 }
 .whychosse-icon .hidden{
   display: none;
+
 }
 .whychosse-icon:hover .showing{
   display: none;
 }
 .whychosse-icon:hover .hidden{
   display: inline;
+}
+.scroll-to-top{
+  width: 45px;
+  height: 45px;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 99;
+  text-align: center;
+  border-radius: 50%;
+}
+.scroll-to-top fa-icon{
+  font-size: 45px;
+}
+.why-choose-one-shape-3{
+  translate: -20px 20px;
+  z-index: 1;
+  position: absolute;
+}
+.why-choose-one-shape-2{
+  translate: -50px 0px;
+  z-index: 5;
+  position: absolute;
 }

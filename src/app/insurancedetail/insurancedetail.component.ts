@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-insurancedetail',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./insurancedetail.component.css']
 })
 export class InsurancedetailComponent {
-
+  faPhone = faPhone
 }

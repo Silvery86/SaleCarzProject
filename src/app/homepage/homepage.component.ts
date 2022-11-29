@@ -3,7 +3,7 @@ import {
   fa1,
   fa2,
   fa3,
-  faCar, faFileShield, faFileSignature,
+  faCar, faCircleUp, faFileShield, faFileSignature,
   faHandHoldingDollar,
   faPiggyBank,
   faTruckFast
@@ -25,6 +25,7 @@ export class HomepageComponent implements OnInit {
   faFast = faTruckFast
   faContract = faFileSignature
   faSurcurity = faFileShield
+  faUp = faCircleUp
 
 
   constructor() { }

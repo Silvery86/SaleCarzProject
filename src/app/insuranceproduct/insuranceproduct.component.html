@@ -1,6 +1,37 @@
 <div class="container row">
   <div class="sidebar col-3">
-    Slider bar
+    <div class="filter">
+      <div class="col-md-6" data-mdb-filter="color">
+        <span class="fa-lg mb-5">Insurance Company</span>
+        <div class="form-check mt-3">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="red">
+          <label class="form-check-label" for="inlineCheckbox1">PVI</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="blue">
+          <label class="form-check-label" for="inlineCheckbox2">MIC</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="black">
+          <label class="form-check-label" for="inlineCheckbox3">BaoViet</label>
+        </div>
+      </div>
+    </div>
+    <div class="filter">
+      <div class="col-md-6" data-mdb-filter="color">
+        <span class="fa-lg mb-5">Insurance Vehicle</span>
+        <div class="form-check mt-3">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="red">
+          <label class="form-check-label" for="inlineCheckbox1">Two-Wheels</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="blue">
+          <label class="form-check-label" for="inlineCheckbox2">Four-Wheels</label>
+        </div>
+    </div>
+
+
+    </div>
   </div>
   <div class="main col-9">
     <div class="main-container">
@@ -15,12 +46,18 @@
       <div *ngIf="slicedNames.length == 0">No data</div>
       <ng-container *ngIf="slicedNames.length > 0">
         <div *ngFor="let is of slicedNames">
-            <div class="insurance">
-              <div class="img"><img src="{{ is.img}}" alt="#"/></div>
-              <div class="name"><h2>{{ is.name }}  {{ is.com }}</h2></div>
-              <div class="des"><h5>{{ is.des }}</h5></div>
-              <div class="price"><p> {{ is.price }}</p> </div>
-              <a routerLink="../detail">Learn more</a>
+            <div class="insurance row">
+              <div class="logo col-2"><img src="{{is.logo}}" alt="#"/> </div>
+              <div class="img col-2"><img src="{{ is.img}}" alt="#"/></div>
+              <div class="title col-8">
+                <div class="name"><h2>{{ is.com }} {{ is.name }}  </h2></div>
+                <div class="des"><h5>{{ is.des }}</h5></div>
+                <div class="price"><p> {{ is.price | currency:'USD':'symbol':'4.3' }} </p> </div>
+                <button routerLink="../detail">Learn more</button>
+
+
+              </div>
+
             </div>
 
         </div>
@@ -37,7 +74,7 @@
           [valuesArr]="data"
           [searchTerms]="searchTerms"
           [searchObservable]="searchObservable"
-          [pageRangeArr]="[12]"
+          [pageRangeArr]="[5]"
         >
 
           <button (click)="pagination.first()" class="page-first-btn"><<</button>

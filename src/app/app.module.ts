@@ -48,8 +48,6 @@ const appRoute: Routes = [
     InsurancedetailComponent,
     ContactComponent,
     GetquoteComponent,
-
-
   ],
   imports: [
     BrowserModule, RouterModule.forRoot(appRoute),
