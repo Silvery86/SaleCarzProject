@@ -20,7 +20,6 @@ body{
 
 }
 .contact-us .title >h2{
-  color: white;
   font-weight: 500;
 }
 .form{
@@ -161,6 +160,24 @@ body{
   width: 100%;
   height: 100%;
 
+}
+.slop{
+  padding-bottom: 20px;
+}
+.slop select{
+  width: 150px;
+  min-height: 50px;
+  border-radius: 10px;
+
+}
+.inputBox button{
+  background: #ff578b;
+  color: white;
+  border: none;
+  max-width: 120px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 14px 15px;
 }
 /*responsive web*/
 @media (max-width: 850px) {
