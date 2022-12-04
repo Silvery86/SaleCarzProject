@@ -1,6 +1,10 @@
 .container{
   margin: 30px 0;
-  height: 250px;
+  height: 300px;
+  background-color: rgba(6, 163, 198, 0.6);
+  border-radius: 10px;
+  box-shadow: black 1px 1px;
+  padding:10px;
 }
 .title{
   padding:25px;
@@ -16,13 +20,13 @@
   color: grey;
 }
 .logo img{
-  width:150px;
+  width:200px;
   margin:25px 200px;
 }
 .image img{
   border-radius: 20px;
   box-shadow: grey 2px 2px;
-  height:250px;
+  height:280px;
   margin-left: 91px;
 }
 .benefit{
@@ -33,8 +37,8 @@ h5{
   color: dodgerblue;
 }
 p{
-  font-size: 15px;
-  color: grey;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.8);
 }
 .contact{
   background-color: rgba(9, 108, 218, 0.7);
@@ -43,7 +47,7 @@ p{
 }
 .contact .info{
   position: relative;
-  border: 1px solid rgba(9, 108, 218, 0.7);
+  border: 1px solid rgba(5, 80, 153, 0.7);
   border-radius: 50%;
   height: 245px;
   width: 245px;
@@ -56,7 +60,6 @@ p{
 
 }
 .contact fa-icon {
-  position: relative;
   height: 50px;
   width: 50px;
   border: 2px solid #0843c0;
@@ -67,4 +70,7 @@ p{
   color: #0843c0;
   font-size: 20px;
   float: left;
+}
+.contact a{
+  font-size: 20px;
 }

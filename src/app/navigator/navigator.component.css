@@ -6,10 +6,15 @@ img{
   width:150px;
   padding:10px;
 }
-.logo{
+.logo img{
   width:20%;
   box-sizing: border-box;
   float:left;
+  background-color: transparent;
+  border-radius: 10px;
+}
+.logo{
+
 }
 .menu{
   width: 50%;
@@ -20,7 +25,10 @@ img{
 }
 .menu .navbar{
   border-radius: 10px;
-  background-color: rgba(0, 17, 61, 0.96);
+  background-color: rgba(47, 246, 125, 0.6);
+  font-size: 15px;
+  border: black 1px solid;
+  box-shadow: grey 1px 1px;
 }
 .contact{
   width:calc(30% - 30px);
@@ -48,4 +56,7 @@ img{
 }
 .btn-primary{
   background-color: rgba(0, 17, 61, 0.96);
+}
+.nav-item{
+  margin-left:20px;
 }

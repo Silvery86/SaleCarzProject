@@ -1,5 +1,5 @@
 <div class="container row">
-  <div class="sidebar col-3">
+  <div class="sidebar col-2">
     <div class="filter">
       <div class="col-md-6" data-mdb-filter="color">
         <span class="fa-lg mb-5">Insurance Company</span>
@@ -33,7 +33,7 @@
 
     </div>
   </div>
-  <div class="main col-9">
+  <div class="main col-10">
     <div class="main-container">
       <div class="search-box">
         <input
@@ -45,21 +45,18 @@
 
       <div *ngIf="slicedNames.length == 0">No data</div>
       <ng-container *ngIf="slicedNames.length > 0">
+        <div class="main">
         <div *ngFor="let is of slicedNames">
-            <div class="insurance row">
-              <div class="logo col-2"><img src="{{is.logo}}" alt="#"/> </div>
-              <div class="img col-2"><img src="{{ is.img}}" alt="#"/></div>
-              <div class="title col-8">
+          <div class="insurance row">
+              <div class="img col-6"><img src="{{ is.img}}" alt="#"/></div>
+              <div class="title col-6">
                 <div class="name"><h2>{{ is.com }} {{ is.name }}  </h2></div>
                 <div class="des"><h5>{{ is.des }}</h5></div>
                 <div class="price"><p> {{ is.price | currency:'USD':'symbol':'4.3' }} </p> </div>
                 <button routerLink="../detail">Learn more</button>
-
-
               </div>
-
             </div>
-
+        </div>
         </div>
       </ng-container>
       <!-- ---pagination-starts -->
@@ -74,7 +71,7 @@
           [valuesArr]="data"
           [searchTerms]="searchTerms"
           [searchObservable]="searchObservable"
-          [pageRangeArr]="[5]"
+          [pageRangeArr]="[10]"
         >
 
           <button (click)="pagination.first()" class="page-first-btn"><<</button>

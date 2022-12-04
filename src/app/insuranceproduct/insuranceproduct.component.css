@@ -3,31 +3,27 @@
 }
 
 .main-container {
-  margin: 50px auto 0 auto;
-  width: fit-content;
+  margin: 10px;
+  width: calc(100% - 20px);
 }
-.logo img{
-  width:120px;
-  height: 120px;
-  float:left;
-  margin: 15px 0;
-  box-shadow: grey 2px 2px;
-}
+
 .img img{
-  width: 120px;
-  height: 120px;
+  width: 250px;
+  height: 200px;
   margin: 15px 0;
   box-shadow: grey 2px 2px;
 }
 .insurance {
-  height:150px;
-  width:800px;
+  height:250px;
+  width:calc(50% - 20px);
   border: grey solid 1px;
   box-shadow: grey 2px 2px;
   border-radius: 10px;
   float:left;
-  margin:20px;
+  margin:10px;
+  box-sizing: border-box;
 }
+
 .title{
   text-align: center;
   margin: 10px 0;
@@ -118,7 +114,7 @@ select {
 }
 .sidebar{
   padding:20px;
-  margin-top: 70px;
+  margin-top: 25px;
 }
 .sidebar .filter{
   border: grey solid 1px;
