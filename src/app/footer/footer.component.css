@@ -5,16 +5,18 @@
   display: flex;
   flex-wrap: wrap;
   width:150px;
+  border-radius: 70px;
 }
 .info p{
-  color: #807a7a;
+
   font-size: 20px
 }
 .info fa-icon{
   font-size: 40px;
   margin-bottom: 50px;
   margin-left: 15px;
-
+  transition: font-size 1s;
+  cursor: pointer;
 }
 .info fa-icon:hover{
   font-size: 50px;
@@ -30,7 +32,7 @@
   font-size: 25px;
 }
 .contact span{
-  color: #807a7a;
+
   margin-left: 10px;
   font-size: 20px;
 }
@@ -47,12 +49,13 @@
   font-size: 30px;
 }
 .newsletter p{
-  color: #807a7a;
+
   font-size: 15px
 }
 .newsletter fa-icon{
   color: rgba(6, 102, 201, 0.95);
   font-size: 25px;
+
 }
 .newsletter a{
   font-size: 25px;
@@ -60,14 +63,14 @@
 }
 .newsletter input{
   font-size: 15px;
-  color: #807a7a;
+  color: rgba(255, 255, 255, 0.78);
   height: 60px;
   width: 90%;
   border: none;
   outline: none;
   padding-left: 20px;
   padding-right: 60px;
-  background-color: rgba(30, 46, 80, 0.78);
+  background-color: rgba(25, 160, 5, 0.78);
   border-radius: 10px;
   font-weight: 400;
 }
@@ -81,7 +84,4 @@
   height: 60px;
 
 }
-.newsletter .email fa-icon{
-  color: rgba(255, 255, 255, 0.78);
-  font-size: 20px;
-}
+

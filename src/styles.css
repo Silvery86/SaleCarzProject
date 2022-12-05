@@ -18,6 +18,10 @@ a{
 img{
   max-width: 100%;
 }
+.container{
+  width: 1200px;
+  margin: auto;
+}
 .section{
   float: left;
   width:100%;

@@ -38,7 +38,12 @@ export class FooterComponent implements OnInit {
     window.location.href = this.mailText;
   }
   onClickSubmit(data: { emailid: string; }) {
-    alert("Thank for subcribe!" + data.emailid);
+    if(data.emailid.length == 0){
+      alert("Please enter your email!");
+    }else {
+      alert("Thank for subcribe!" + data.emailid);
+    }
+
   }
 
 }

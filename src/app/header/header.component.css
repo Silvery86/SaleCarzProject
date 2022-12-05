@@ -1,5 +1,5 @@
 .container .top-page-left{
-  color: #827a7a;
+
   width: 50%;
   float: left;
   box-sizing: border-box;
@@ -11,7 +11,7 @@
   background-color: rgba(47, 246, 125, 0.1);
 }
 .container .top-page-right{
-  color: #827a7a;
+
   width: 50%;
   box-sizing: border-box;
 
@@ -49,12 +49,16 @@ fa-icon{
   display:flex;
 
   justify-content: center;
-
+  transition: rotate 2s;
+  cursor: pointer;
 }
 a{
-  color: #827a7a;
+  color: rgba(0, 0, 0, 0.8);
 }
 .top-page-left fa-icon{
   color: rgba(0, 77, 161, 0.8);
   margin-right:5px;
+}
+.socialmedia fa-icon:hover{
+  rotate: 360deg;
 }
