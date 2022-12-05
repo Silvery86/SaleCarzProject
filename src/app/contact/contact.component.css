@@ -106,6 +106,7 @@ body{
   padding: 40px;
   background: white;
   box-shadow: 0 5px 35px rgba(0,0,0,0.15);
+  border-radius: 10px;
 }
 .box{
   position: relative;
@@ -175,8 +176,9 @@ body{
 }
 /*Contact*/
 .info{
-  background-color: #0e3959;
-  color: white;
+  background-color: #4fa849;
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
 }
 .info h3{
   color: white;
@@ -286,4 +288,14 @@ body{
     padding: 30px;
   }
 
+}
+.detail fa-icon{
+  font-size: 30px;
+  padding:5px;
+
+}
+.sci fa-icon{
+  font-size: 50px;
+  padding:10px;
+  cursor: pointer;
 }
