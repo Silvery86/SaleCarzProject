@@ -250,6 +250,10 @@ body{
   font-weight: 500;
   cursor: pointer;
   padding: 14px 15px;
+
+}
+.inputBox input{
+  border-radius: 10px;
 }
 .inputBox input{
   border-radius: 10px;
