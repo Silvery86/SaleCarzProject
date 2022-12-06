@@ -10,18 +10,18 @@ import {debounceTime, distinctUntilChanged, Observable, of, Subject, switchMap} 
 })
 export class InsuranceproductComponent implements OnInit, OnChanges, AfterViewInit{
   public INS =[
-    {name:'Car Insurance',com:'PVI',des:'Insurance description',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:1500.2},
-    {name:'Car Insurance',com:'MIC',des:'Insurance description',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:100.2},
-    {name:'Motobike Insurance',com:'PVI',des:'Insurance description',img:'../../assets/motobikeinsurance.jpeg', logo:'../../assets/companylogo/pvi-logo.png' ,price:1200.5},
-    {name:'Car Insurance',com:'Bao Viet',des:'Insurance description',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:1000.56},
-    {name:'Car Insurance',com:'PVI',des:'Insurance description',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:500},
-    {name:'Motobike Insurance',com:'PVI',des:'Insurance description',img:'../../assets/motobikeinsurance.jpeg', logo:'../../assets/companylogo/pvi-logo.png' ,price:1500.2},
-    {name:'Car Insurance',com:'PVI',des:'Insurance description',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:150},
-    {name:'Car Insurance',com:'PVI',des:'Insurance description',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:1500},
-    {name:'Car Insurance',com:'PVI',des:'Insurance description',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:1500},
-    {name:'Car Insurance',com:'PVI',des:'Insurance description',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:1500.2},
-    {name:'Car Insurance',com:'PVI',des:'Insurance description',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:1500.2},
-    {name:'Car Insurance',com:'PVI',des:'Insurance description',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:1500.2},
+    {name:'Automatic material insurance',com:'BaoViet',des:'',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:500.000},
+    {name:'VEHICLE INSURANCE',com:'BaoViet',des:'',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:500.000},
+    {name:'2-WAY CAR INSURANCE',com:'BaoViet',des:'',img:'../../assets/motobikeinsurance.jpeg', logo:'../../assets/companylogo/pvi-logo.png' ,price:500.000},
+    {name:'Compulsory auto insurance ',com:'Bao Viet',des:'',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:100.56},
+    {name:'Compulsory motorcycle insurance',com:'PVI',des:'',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:500.000},
+    {name:'Compulsory insurance',com:'PVI',des:'',img:'../../assets/motobikeinsurance.jpeg', logo:'../../assets/companylogo/pvi-logo.png' ,price:650.9},
+    {name:'Voluntary car insurance',com:'PVI',des:'',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:199.9},
+    {name:'2 way insurance car',com:'PVI',des:'',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:560.9},
+    {name:'Voluntary motorcycle insurance',com:'PVI',des:'',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:568.9},
+    {name:'Compulsory motorcycle',com:'PTI',des:'',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:325.5},
+    {name:'Auto body insurance ..',com:'PTI',des:'',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:1500.2},
+    {name:'civil liability insurance',com:'PTI',des:'',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:1500.2},
 
   ]
 
