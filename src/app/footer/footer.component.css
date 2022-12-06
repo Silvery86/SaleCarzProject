@@ -70,7 +70,7 @@
   outline: none;
   padding-left: 20px;
   padding-right: 60px;
-  background-color: rgba(25, 160, 5, 0.78);
+  background-color: rgba(4, 23, 38, 0.9);
   border-radius: 10px;
   font-weight: 400;
 }
@@ -84,4 +84,9 @@
   height: 60px;
 
 }
+.container{
+  width:1200px;
+  margin: 0 auto;
+  padding: 20px 0;
 
+}
