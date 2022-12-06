@@ -145,6 +145,7 @@ body{
 .formBox .row100 .inputBox{
   width: 100%;
 }
+
 .inputBox span{
   color: #18b7ff;
   margin-top: 10px;
@@ -166,7 +167,7 @@ body{
   margin-bottom: 20px;
 }
 .inputBox input[type="submit"]{
-  background: #ff578b;
+  background: green;
   color: white;
   border: none;
   max-width: 120px;
@@ -243,13 +244,16 @@ body{
 
 }
 .inputBox button{
-  background: #ff578b;
+  border-radius: 10px;
+  background: deepskyblue;
   color: white;
   border: none;
-  max-width: 120px;
+  max-width: 200px;
+  max-height: 50px;
   font-weight: 500;
   cursor: pointer;
   padding: 14px 15px;
+
 
 }
 .inputBox input{
