@@ -107,7 +107,8 @@
 }
 .exp{
   width:150px;
-  translate: 300px -480px;
+  translate: 300px 400px;
+  position: absolute;
 }
 .ourservices{
   padding:50px;
@@ -254,6 +255,7 @@
   width: 800px;
   max-width: none;
   translate: -150px -50px;
+  position: absolute;
   z-index: 50;
 }
 .whychose-detail{
@@ -338,4 +340,55 @@ h2{
 .contact button:hover{
   background-color: rgba(6, 31, 51, 0.9);
   color: whitesmoke;
+}
+.contact{
+  width:calc(30% - 30px);
+  margin-top:70px;
+  margin-left:70px;
+  float:left;
+}
+.contact a{
+  font-size: 20px;
+}
+.contact p{
+  font-size: 15px;
+}
+.contact fa-icon{
+  position: relative;
+  height: 50px;
+  width: 50px;
+  border: 2px solid deepskyblue;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: deepskyblue;
+  font-size: 20px;
+
+
+}
+
+.contact-phone a{
+  font-size: 25px;
+
+}
+.contact-phone .col-10 p{
+  font-size: 15px;
+  margin:0;
+}
+.contact-phone fa-icon{
+  position: relative;
+  height: 50px;
+  width: 50px;
+  border: 2px solid deepskyblue;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: deepskyblue;
+  font-size: 20px;
+}
+.contact-phone{
+  margin-top:25px;
+  margin-left: 20px;
 }

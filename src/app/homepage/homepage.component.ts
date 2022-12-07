@@ -5,6 +5,7 @@ import {
   fa3,
   faCar, faCircleUp, faFileShield, faFileSignature,
   faHandHoldingDollar,
+  faPhone,
   faPiggyBank,
   faTruckFast
 } from "@fortawesome/free-solid-svg-icons";
@@ -26,6 +27,7 @@ export class HomepageComponent implements OnInit {
   faContract = faFileSignature
   faSurcurity = faFileShield
   faUp = faCircleUp
+  faPhone = faPhone
 
 
   constructor() { }
