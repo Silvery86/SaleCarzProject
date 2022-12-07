@@ -50,9 +50,8 @@
           <div class="insurance">
               <div class="img"><img src="{{ is.img}}" alt="#"/></div>
               <div class="title">
-                <div class="name"><h2>{{ is.com }} - {{ is.name }}  </h2></div>
-                <div class="des"><h5>{{ is.des }}</h5></div>
-                <div class="price"><p> {{ is.price | currency:'USD':'symbol':'4.3' }} </p> </div>
+                <div class="name"><h2>{{ is.com | uppercase }} - {{ is.name | titlecase }}  </h2></div>
+                <div class="price"><p> {{ is.price | currency: 'VND':'symbol' }} </p> </div>
                 <button routerLink="../detail">Learn more</button>
               </div>
             </div>

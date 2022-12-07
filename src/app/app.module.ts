@@ -20,6 +20,7 @@ import { InsurancedetailComponent } from './insurancedetail/insurancedetail.comp
 import { ContactComponent } from './contact/contact.component';
 import { GetquoteComponent } from './getquote/getquote.component';
 import {PaginationModule} from "@snoringarvind/pagination";
+import {Expansion, ExpansionCase} from "@angular/compiler";
 
 
 

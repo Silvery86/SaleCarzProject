@@ -17,7 +17,7 @@
 }
 .insurance {
   max-width: 100%;
-  height:350px;
+  height:450px;
   width:calc(25% - 30px);
   border: grey solid 1px;
   box-shadow: grey 2px 2px;
@@ -35,24 +35,24 @@
 }
 .name h2{
   font-size: 25px;
-  color: #0da502;
+  color: rgba(0, 0, 0, 0.85);
+  height:100px;
+
 }
-.des h5{
-  font-size: 15px;
-  color: grey;
-}
+
 .price p{
-  color:red;
-  font-size: 15px;
+  color: rgba(255, 0, 0, 0.87);
+  font-size: 20px;
+  height:50px;
 }
 .title button{
-  border-radius: 10px;
-  border: rgba(52, 128, 1, 0.87) solid 1px;
-  padding:10px;
+  border-radius: 20px;
+  font-size: 20px;
+  padding:20px;
   transition:background-color 2s;
 }
 .title button:hover{
-  background-color: #8be07e;
+  background-color: #063b64;
   color: rgba(255, 255, 255, 0.8);
 }
 img{
@@ -61,6 +61,8 @@ img{
 .pagination-container{
   width:100%;
   float:left;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 .pageno-input {
   width: 30px;

@@ -1,7 +1,11 @@
 <div class="container row">
   <div class="title col-6">
-    <h2>PVI Car Insurance</h2>
-    <p>Insurance Description</p>
+    <h2>PVI Voluntary car insurance</h2>
+    <fa-icon [icon]="faLocation"></fa-icon>
+    <h5>24th floor, PVI Tower Building, No. 1 Pham Van Bach, Cau Giay District, Hanoi</h5>
+    <fa-icon [icon]="faPhone"></fa-icon>
+    <h4>0215 356 511</h4>
+    <p>Voluntary auto insurance is a type of insurance that ensures the safety of car owners when participating in traffic. The purpose of this type of voluntary auto insurance is to provide reasonable and quick compensation plans to ensure the interests of car owners when there are incidents, for example: natural disasters, fire and explosion, and accidents, theft, ....</p>
   </div>
   <div class="logo col-6">
     <img src="assets/companylogo/pvi-logo.png" alt="#"/>
@@ -14,19 +18,25 @@
   </div>
   <div class="benefit col-6">
     <h5><img src="assets/left-right.png" alt="#"/>INSURANCE BENEFIT<img src="assets/right-left.png" alt="#"/></h5>
-    <p>Benefit</p>
-  </div>
+    <ul>
+      <li>Freedom to choose insurance providers</li>
+      <li>Quick handling procedures when problems arise</li>
+      <li>Enjoy the benefits of genuine repair and accessories</li>
+      <li>The car owner does not have to pay compensation costs</li>
+      <li>Supported 24/24 by specialized staff, hotline of insurance providers</li>
+    </ul>
+    </div>
   </div>
 <div class="container row text-center">
   <div class="term">
     <h5><img src="assets/left-right.png" alt="#"/>COMPANY TERM<img src="assets/right-left.png" alt="#"/></h5>
-    <p> This company term</p>
+    <p> PVI is a comprehensive insurance product with the widest coverage for all risks on every journey. With the Liberty digital technology, you can get a quote and purchase your auto insurance within minutes. Particularly, the features of vehicle self-inspection will make your experience safer and more convenient</p>
   </div>
 </div>
 <div class="container row text-center">
   <div class="fomula">
     <h5><img src="assets/left-right.png" alt="#"/>INSURANCE FOMULA<img src="assets/right-left.png" alt="#"/></h5>
-    <p>Formula to calculate insurance price </p>
+    <p>Insurance price = Vehicle price * (insurance rate + vehicle rate + company rate)</p>
   </div>
 </div>
 
@@ -47,7 +57,24 @@
 <div class="container qna">
   <h5><img src="assets/left-right.png" alt="#"/>WE ALLWAYS HELP<img src="assets/right-left.png" alt="#"/></h5>
   <h2>They frequently asked questions</h2>
-
-</div>
+  <div class="question row">
+    <div class="question-detail col-12">
+      <button (click)="qna()">Do I need to check the car before joining?</button>
+      <p *ngIf="!isShowing">Usually with newly purchased cars, this procedure is not necessary. For old cars, taking pictures of cars in 8 directions is necessary to assess risks before issuing an application as well as evidence to record after participating in insurance.</p>
+    </div>
+    <div class="question-detail col-12">
+      <button (click)="qna1()">If the car breaks down in a foreign country, is it covered by insurance?</button>
+      <p *ngIf="!isShowing1">For vehicles with problems occurring outside the territory of the Socialist Republic of Vietnam will not be compensated for damage</p>
+    </div>
+    <div class="question-detail col-12">
+      <button (click)="qna2()">How long does it take to claim compensation?</button>
+      <p *ngIf="!isShowing2">Complaints must be sent to the insurance company within 30 days from the end of the trip with all documents such as reports from hospitals, doctors, police, airlines or other responsible authorities. other</p>
+    </div>
+    <div class="question-detail col-12">
+      <button (click)="qna3()">I have purchased insurance but want to cancel the insurance and how much is the refund?</button>
+      <p *ngIf="!isShowing3">In case the customer has a request to unilaterally terminate the insurance contract, if the customer gives notice 03 working days before the insurance effective date, 70% of the insurance premium will be refunded, non-refundable if the customer has issued insurance validity. In case the insurance company unilaterally cancels the insurance contract, 100% of the premium will be refunded</p>
+    </div>
+  </div>
+  </div>
 
 
