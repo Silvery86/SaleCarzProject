@@ -21,8 +21,15 @@ export class InsuranceproductComponent implements OnInit, OnChanges, AfterViewIn
     {name:'Voluntary motorcycle insurance',com:'PVI',des:'',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:568.9},
     {name:'Compulsory motorcycle',com:'PTI',des:'',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:325.5},
     {name:'Auto body insurance ..',com:'PTI',des:'',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:1500.2},
-    {name:'civil liability insurance',com:'PTI',des:'',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:1500.2},
-
+    {name:'Material insurance',com:'PTI',des:'',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:1500.2},
+    {name:'CAR 2-WAY INSURANCE',com:'PTI',des:'',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:1500.2},
+    {name:'Voluntary motorcycle insurance',com:'PTI',des:'',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:1500.2},
+    {name:'Compulsory motorcycle',com:'PTI',des:'',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:1500.2},
+    {name:'Material insurance',com:'PTI',des:'',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:1500.2},
+    {name:'civil liability insurance',com:'PJICO',des:'',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:1500.2},
+    {name:'Material insurance',com:'PJICO',des:'',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:1500.2},
+    {name:'2-way auto insurance',com:'PJICO',des:'',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:1500.2},
+    {name:'Voluntary motorcycle insurance',com:'PJICO',des:'',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:1500.2},
   ]
 
   title = 'pagination';
