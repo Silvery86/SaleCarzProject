@@ -21,6 +21,7 @@ import { ContactComponent } from './contact/contact.component';
 import { GetquoteComponent } from './getquote/getquote.component';
 import {PaginationModule} from "@snoringarvind/pagination";
 import {Expansion, ExpansionCase} from "@angular/compiler";
+import {NewsComponent} from "./news/news.component";
 
 
 
@@ -30,7 +31,8 @@ const appRoute: Routes = [
   {path:'contact',component:ContactComponent},
   {path:'getquote',component:GetquoteComponent},
   {path:'products',component:InsuranceproductComponent},
-  {path:'detail',component:InsurancedetailComponent}
+  {path:'detail',component:InsurancedetailComponent},
+  {path:'news',component:NewsComponent}
 ]
 
 
@@ -49,6 +51,7 @@ const appRoute: Routes = [
     InsurancedetailComponent,
     ContactComponent,
     GetquoteComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule, RouterModule.forRoot(appRoute),
