@@ -20,7 +20,8 @@ import { InsurancedetailComponent } from './insurancedetail/insurancedetail.comp
 import { ContactComponent } from './contact/contact.component';
 import { GetquoteComponent } from './getquote/getquote.component';
 import {PaginationModule} from "@snoringarvind/pagination";
-import {Expansion, ExpansionCase} from "@angular/compiler";
+
+import {HttpClientModule} from "@angular/common/http";
 
 
 
@@ -30,17 +31,15 @@ const appRoute: Routes = [
   {path:'contact',component:ContactComponent},
   {path:'getquote',component:GetquoteComponent},
   {path:'products',component:InsuranceproductComponent},
-  {path:'detail',component:InsurancedetailComponent}
+  {path:'detail/:productId',component:InsurancedetailComponent}
 ]
-
-
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
-    HeaderComponent,
+    HeaderComponent, FooterComponent,
     FooterComponent,
     NavigatorComponent,
     AboutusComponent,
@@ -55,7 +54,7 @@ const appRoute: Routes = [
     FontAwesomeModule, FontAwesomeModule,
     FormsModule, MdbCollapseModule, MdbDropdownModule,
     NgbModule, NgImageSliderModule, MdbCarouselModule,
-    PaginationModule, NgbPaginationModule,
+    PaginationModule, NgbPaginationModule,HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

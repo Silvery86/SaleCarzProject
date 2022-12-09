@@ -1,5 +1,8 @@
-import {AfterViewInit, ChangeDetectorRef, Component, OnChanges, OnInit} from '@angular/core';
+import {AfterViewInit, ChangeDetectorRef, Component, Input, OnChanges, OnInit} from '@angular/core';
 import {debounceTime, distinctUntilChanged, Observable, of, Subject, switchMap} from "rxjs";
+import {IDatas, Insurance, IProducts} from "../interface/insurance.interface";
+import {HttpClient} from "@angular/common/http";
+import {ActivatedRoute} from "@angular/router";
 
 
 
@@ -9,22 +12,10 @@ import {debounceTime, distinctUntilChanged, Observable, of, Subject, switchMap} 
   styleUrls: ['./insuranceproduct.component.css']
 })
 export class InsuranceproductComponent implements OnInit, OnChanges, AfterViewInit{
-  public INS =[
-    {name:'Automatic material insurance',com:'BaoViet',des:'',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:500.000},
-    {name:'VEHICLE INSURANCE',com:'BaoViet',des:'',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:500.000},
-    {name:'2-WAY CAR INSURANCE',com:'BaoViet',des:'',img:'../../assets/motobikeinsurance.jpeg', logo:'../../assets/companylogo/pvi-logo.png' ,price:500.000},
-    {name:'Compulsory auto insurance ',com:'Bao Viet',des:'',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:100.56},
-    {name:'Compulsory motorcycle insurance',com:'PVI',des:'',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:500.000},
-    {name:'Compulsory insurance',com:'PVI',des:'',img:'../../assets/motobikeinsurance.jpeg', logo:'../../assets/companylogo/pvi-logo.png' ,price:650.9},
-    {name:'Voluntary car insurance',com:'PVI',des:'',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:199.9},
-    {name:'2 way insurance car',com:'PVI',des:'',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:560.9},
-    {name:'Voluntary motorcycle insurance',com:'PVI',des:'',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:568.9},
-    {name:'Compulsory motorcycle',com:'PTI',des:'',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:325.5},
-    {name:'Auto body insurance ..',com:'PTI',des:'',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:1500.2},
-    {name:'civil liability insurance',com:'PTI',des:'',img:'../../assets/carinsurance.png', logo:'../../assets/companylogo/pvi-logo.png' ,price:1500.2},
+    @Input() insurance: any;
 
-  ]
 
+  insurancedata: Insurance[] = [];
   title = 'pagination';
   data: any[] = [];
   slicedNames: any[] = [];
@@ -34,45 +25,38 @@ export class InsuranceproductComponent implements OnInit, OnChanges, AfterViewIn
   rulesPerPage!: number;
   currentPage: number = 1;
   searchObservable!: Observable<any>;
-  constructor(private cdRef: ChangeDetectorRef) {}
-  searchTerms = new Subject<string>();
 
+  private id: any;
+  productId: number = 0;
+
+
+
+
+
+  constructor(private cdRef: ChangeDetectorRef,
+              private http: HttpClient,
+              private route: ActivatedRoute) {
+
+  }
+
+  searchTerms = new Subject<string>();
 
   search(term: string) {
     this.searchTerms.next(term);
+  } ngOnInit() {
+    this.id = this.route.params.subscribe( params => {
+      this.productId = +params['productId']
+    })
+
+    const url = 'http://139.180.186.20:3333/g3-insurance-company-vehicle';
+    this.http.get<Insurance[]>(url).subscribe(data => {
+      this.insurancedata = data
+      let x: Insurance[] = [];
+      x = this.insurancedata
+      this.data = x
+    })
   }
 
-  ngOnInit() {
-
-    let x: any[] = [];
-
-
-    for (let i:any = 0; i < this.INS.length; i++) {
-       x[i] = this.INS[i]
-
-    }
-
-    for (let i:any = 0; i < this.INS.length; i++) {
-      this.data[i] = x[i]
-
-      console.log(this.data[i].img)
-    }
-
-      this.searchObservable = this.searchTerms.pipe(
-      debounceTime(300),
-
-      distinctUntilChanged(),
-      switchMap((term: string) => {
-        let fr: any = [];
-        this.data.filter((v: any, i: any) => {
-          if (v.toLocaleLowerCase().includes(term.toLocaleLowerCase())) {
-            fr.push(v);
-          }
-        });
-        return of(fr);
-      })
-    );
-  }
 
   ngOnChanges() {}
 
@@ -85,10 +69,8 @@ export class InsuranceproductComponent implements OnInit, OnChanges, AfterViewIn
     this.btnNosArr = val.btnNosArr;
     this.rulesPerPage = val.rulesPerPage;
     this.selectArr = val.newPageRangeArr;
-
-    this.slicedNames = val.valuesArr;
+    this.insurancedata = val.valuesArr;
   }
-
 }
 
 

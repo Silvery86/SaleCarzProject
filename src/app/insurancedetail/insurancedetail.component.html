@@ -1,36 +1,30 @@
-<div class="container row">
+<div class="container row" *ngFor="let dt of product" >
   <div class="title col-6">
-    <h2>PVI Voluntary car insurance</h2>
+    <h2>{{dt.companyName}} {{dt.productName}} </h2>
     <fa-icon [icon]="faLocation"></fa-icon>
-    <h5>24th floor, PVI Tower Building, No. 1 Pham Van Bach, Cau Giay District, Hanoi</h5>
+    <h5>{{dt.address}}</h5>
     <fa-icon [icon]="faPhone"></fa-icon>
-    <h4>0215 356 511</h4>
-    <p>Voluntary auto insurance is a type of insurance that ensures the safety of car owners when participating in traffic. The purpose of this type of voluntary auto insurance is to provide reasonable and quick compensation plans to ensure the interests of car owners when there are incidents, for example: natural disasters, fire and explosion, and accidents, theft, ....</p>
+    <h4>{{dt.hotline}}</h4>
+    <p>{{dt.description}}</p>
   </div>
   <div class="logo col-6">
-    <img src="assets/companylogo/pvi-logo.png" alt="#"/>
+    <img src="{{dt.logo}}" alt="#"/>
   </div>
 </div>
 
-<div class="container row">
+<div class="container row" *ngFor="let dt of product">
   <div class="image col-6">
-    <img src="assets/motobikeinsurance.jpeg" alt="#"/>
+    <img src="{{dt.pictureproduct}}" alt="#"/>
   </div>
   <div class="benefit col-6">
     <h5><img src="assets/left-right.png" alt="#"/>INSURANCE BENEFIT<img src="assets/right-left.png" alt="#"/></h5>
-    <ul>
-      <li>Freedom to choose insurance providers</li>
-      <li>Quick handling procedures when problems arise</li>
-      <li>Enjoy the benefits of genuine repair and accessories</li>
-      <li>The car owner does not have to pay compensation costs</li>
-      <li>Supported 24/24 by specialized staff, hotline of insurance providers</li>
-    </ul>
+    <p>{{dt.insuranceBenefit}}</p>
     </div>
   </div>
-<div class="container row text-center">
+<div class="container row text-center" *ngFor="let dt of product">
   <div class="term">
     <h5><img src="assets/left-right.png" alt="#"/>COMPANY TERM<img src="assets/right-left.png" alt="#"/></h5>
-    <p> PVI is a comprehensive insurance product with the widest coverage for all risks on every journey. With the Liberty digital technology, you can get a quote and purchase your auto insurance within minutes. Particularly, the features of vehicle self-inspection will make your experience safer and more convenient</p>
+    <p>{{dt.term}}</p>
   </div>
 </div>
 <div class="container row text-center">

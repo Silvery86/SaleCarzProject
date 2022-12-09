@@ -303,14 +303,15 @@ h2{
   padding:10px;
   margin-top:10px;
 }
-.container .contact{
+
+.container-contact .contact{
   width: 1200px;
   margin: 0 auto;
   border: grey solid 1px;
   height:200px;
   background-color: rgba(47, 88, 215, 0.96);
   border-radius: 20px 20px 0 0;
-
+  float:none;
 }
 .contact fa-icon{
   font-size: 60px;
@@ -355,22 +356,19 @@ h2{
 }
 .contact fa-icon{
   position: relative;
-  height: 50px;
-  width: 50px;
+  height: 80px;
+  width: 80px;
   border: 2px solid deepskyblue;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: deepskyblue;
-  font-size: 20px;
-
-
+  font-size: 30px;
 }
 
 .contact-phone a{
   font-size: 25px;
-
 }
 .contact-phone .col-10 p{
   font-size: 15px;
