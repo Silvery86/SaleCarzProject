@@ -1,0 +1,54 @@
+<div class="container row">
+  <div class="sidebar col-2">
+    <div class="filter">
+      <div class="col-md-6" data-mdb-filter="color">
+        <span class="fa-lg mb-5">Insurance Company</span>
+        <div class="form-check mt-3">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="red">
+          <label class="form-check-label" for="inlineCheckbox1">PVI</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="blue">
+          <label class="form-check-label" for="inlineCheckbox2">MIC</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="black">
+          <label class="form-check-label" for="inlineCheckbox3">BaoViet</label>
+        </div>
+      </div>
+    </div>
+    <div class="filter">
+      <div class="col-md-6" data-mdb-filter="color">
+        <span class="fa-lg mb-5">Insurance Vehicle</span>
+        <div class="form-check mt-3">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="red">
+          <label class="form-check-label" for="inlineCheckbox1">Two-Wheels</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="blue">
+          <label class="form-check-label" for="inlineCheckbox2">Four-Wheels</label>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <div class="main col-10">
+    <div class="main-container">
+      <ng-container>
+        <div class="contentdetail">
+           <div *ngFor="let co of company">
+            <div class="insurance">
+              <div class="img"><img src="{{ co.pictureproduct}}" alt="#"/></div>
+              <div class="title">
+                <div class="name"><h2>{{ co.companyName | uppercase }} - {{ co.productName | titlecase }}  </h2></div>
+                <div class="price"><p> {{ co.insuranceRate | currency: 'VND':'symbol' }} </p> </div>
+                <button routerLink="/detail/{{co.productId}}" >Learn more</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
