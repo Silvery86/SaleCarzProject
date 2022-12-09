@@ -167,7 +167,7 @@ body{
   margin-bottom: 20px;
 }
 .inputBox input[type="submit"]{
-  background: green;
+  background: #0e3959;
   color: white;
   border: none;
   max-width: 120px;
@@ -177,7 +177,7 @@ body{
 }
 /*Contact*/
 .info{
-  background-color: #4fa849;
+  background-color: #0e3959;
   color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
 }
