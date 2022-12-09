@@ -20,8 +20,9 @@ import { InsurancedetailComponent } from './insurancedetail/insurancedetail.comp
 import { ContactComponent } from './contact/contact.component';
 import { GetquoteComponent } from './getquote/getquote.component';
 import {PaginationModule} from "@snoringarvind/pagination";
-
 import {HttpClientModule} from "@angular/common/http";
+import {InsurancecompaniesComponent} from "./insurancecompanies/insurancecompanies.component";
+import { InsurancevehiclesComponent } from './insurancevehicles/insurancevehicles.component';
 
 
 
@@ -31,6 +32,8 @@ const appRoute: Routes = [
   {path:'contact',component:ContactComponent},
   {path:'getquote',component:GetquoteComponent},
   {path:'products',component:InsuranceproductComponent},
+  {path:'companies/:companyId',component:InsurancecompaniesComponent},
+  {path:'vehicles/:vehicleId',component:InsurancevehiclesComponent},
   {path:'detail/:productId',component:InsurancedetailComponent}
 ]
 
@@ -48,7 +51,9 @@ const appRoute: Routes = [
     InsurancedetailComponent,
     ContactComponent,
     GetquoteComponent,
-  ],
+    InsurancecompaniesComponent,
+    InsurancevehiclesComponent,
+    ],
   imports: [
     BrowserModule, RouterModule.forRoot(appRoute),
     FontAwesomeModule, FontAwesomeModule,

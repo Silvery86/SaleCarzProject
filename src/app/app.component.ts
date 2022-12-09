@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {IDatas} from "./interface/insurance.interface";
+
 
 
 
