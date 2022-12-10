@@ -21,4 +21,13 @@ export class ContactComponent {
   faLocation = faLocationDot
   faEnvelop = faEnvelope
   faPhone = faPhoneVolume;
+
+  onClickSubmit(data: any) {
+    if(data.emailid.length == 0){
+      alert("Please enter your email!");
+    }else {
+      alert("Thank you, We will contact you as soon as possible! Please check your email " + data.emailid + " for more imformation");
+    }
+  }
 }
+

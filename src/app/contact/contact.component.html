@@ -1,35 +1,32 @@
 <div class="contact-us">
   <div class="title">
-    <h2>Contact to us </h2>
+    <h5 class="text-center"><img src="assets/left-right.png" alt="#"/>Contact Us<img src="assets/right-left.png" alt="#"/></h5>
   </div>
   <div class="box">
     <!--form-->
 
     <div class="contact form">
       <h3>Send a message</h3>
-      <form class="formBox">
+      <form class="formBox" #contactus = "ngForm" (ngSubmit)="onClickSubmit(contactus.value)">
         <div class="row50">
           <div class="inputBox">
             <span>First Name</span>
-            <input type="text" placeholder="Jhon" required>
-
+            <input type="text" placeholder="Your First Name" name="fname" required>
           </div>
           <div class="inputBox">
             <span>Last Name</span>
-            <input type="text" placeholder="Ani" required>
+            <input type="text" placeholder="Your Last Name" name="lname" required>
           </div>
-
         </div>
         <div class="row50">
           <div class="inputBox">
             <span>Email</span>
-            <input type="email" placeholder="jhonani@gmail.com" required>
+            <input type="email" name="emailid" placeholder="Your Email" ngModel [email]="true" required>
           </div>
           <div class="inputBox">
             <span>Mobile</span>
-            <input type="tel" placeholder="+09xxx xxx xxx" required>
+            <input type="tel" placeholder="Phone Number" name="phone" required>
           </div>
-
         </div>
         <div class="row100">
           <div class="inputBox">
@@ -37,10 +34,9 @@
             <textarea placeholder="Write your message here..."></textarea>
           </div>
         </div>
-
         <div class="row100">
           <div class="inputBox">
-            <button type="submit"  value="Submit">Send a message</button>
+            <button type="submit"  value="submit">Send a message</button>
           </div>
         </div>
 
@@ -74,7 +70,7 @@
     </div>
     <!--map box-->
     <div class="contact map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3501.89242680598!2d77.219374!3d28.632986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1669910623717!5m2!1svi!2s"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2312.2902023070355!2d106.66504701937478!3d10.783728284381727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ff24072db4b%3A0xac87c892d63f3312!2sSAFE%20CARZ%20Limited!5e0!3m2!1svi!2s!4v1670637274725!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 

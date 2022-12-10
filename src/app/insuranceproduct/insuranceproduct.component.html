@@ -35,18 +35,21 @@
   </div>
   <div class="main col-10">
     <div class="main-container">
+      <h5 class="text-center"><img src="assets/left-right.png" alt="#"/>ALL INSURANCE<img src="assets/right-left.png" alt="#"/></h5>
        <ng-container>
         <div class="contentdetail">
-        <div *ngFor="let is of insurancedata">
+        <div *ngFor="let is of insurancedata | paginate: { itemsPerPage: 8, currentPage: p }">
           <div class="insurance">
               <div class="img"><img src="{{ is.pictureproduct}}" alt="#"/></div>
               <div class="title">
                 <div class="name"><h2>{{ is.companyName | uppercase }} - {{ is.productName | titlecase }}  </h2></div>
+                <div class="description"><p>{{is.description}}</p></div>
                 <div class="price"><p> {{ is.insuranceRate | currency: 'VND':'symbol' }} </p> </div>
                 <button routerLink="/detail/{{is.productId}}" >Learn more</button>
               </div>
             </div>
         </div>
+          <pagination-controls (pageChange)="p = $event" class="float-center"></pagination-controls>
       </div>
       </ng-container>
        </div>

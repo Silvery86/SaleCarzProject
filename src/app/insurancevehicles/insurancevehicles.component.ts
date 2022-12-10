@@ -32,6 +32,7 @@ export class InsurancevehiclesComponent {
   vehicle: Insurance[] = [];
   productId: number = 0;
   private id1: any;
+  p: number = 1;
 
 
 

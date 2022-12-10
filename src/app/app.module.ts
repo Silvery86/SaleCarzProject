@@ -8,7 +8,7 @@ import {FooterComponent} from './footer/footer.component';
 import {NavigatorComponent} from './navigator/navigator.component';
 import {AboutusComponent} from './aboutus/aboutus.component';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MdbCollapseModule} from 'mdb-angular-ui-kit/collapse';
 import {MdbDropdownModule} from "mdb-angular-ui-kit/dropdown";
 import {NgbModule, NgbPaginationModule} from "@ng-bootstrap/ng-bootstrap";
@@ -23,6 +23,7 @@ import {PaginationModule} from "@snoringarvind/pagination";
 import {HttpClientModule} from "@angular/common/http";
 import {InsurancecompaniesComponent} from "./insurancecompanies/insurancecompanies.component";
 import { InsurancevehiclesComponent } from './insurancevehicles/insurancevehicles.component';
+import {NgxPaginationModule} from "ngx-pagination";
 
 
 
@@ -60,6 +61,7 @@ const appRoute: Routes = [
     FormsModule, MdbCollapseModule, MdbDropdownModule,
     NgbModule, NgImageSliderModule, MdbCarouselModule,
     PaginationModule, NgbPaginationModule,HttpClientModule,
+    ReactiveFormsModule, NgxPaginationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

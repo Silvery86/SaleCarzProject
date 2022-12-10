@@ -1,5 +1,4 @@
-import { ChangeDetectorRef, Component, Input,  OnInit} from '@angular/core';
-import { Observable} from "rxjs";
+import {  Component, Input,  OnInit} from '@angular/core';
 import { Insurance} from "../interface/insurance.interface";
 import {HttpClient} from "@angular/common/http";
 import {ActivatedRoute} from "@angular/router";
@@ -18,24 +17,12 @@ export class InsuranceproductComponent implements OnInit{
   insurancedata: Insurance[] = [];
   title = 'pagination';
   data: any[] = [];
-  slicedNames: any[] = [];
-  showSelect: boolean = false;
-  selectArr: number[] = [];
-  btnNosArr: number[] = [];
-  rulesPerPage!: number;
-  currentPage: number = 1;
-  searchObservable!: Observable<any>;
-
   private id: any;
   productId: number = 0;
 
+  p: number = 1;
 
-
-
-
-
-  constructor(private cdRef: ChangeDetectorRef,
-              private http: HttpClient,
+  constructor(private http: HttpClient,
               private route: ActivatedRoute) {
 
   }
