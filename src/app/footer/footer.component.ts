@@ -41,7 +41,7 @@ export class FooterComponent implements OnInit {
     if(data.emailid.length == 0){
       alert("Please enter your email!");
     }else {
-      alert("Thank for subcribe!" + data.emailid);
+       alert("Thank for subcribe!" + data.emailid);
     }
 
   }

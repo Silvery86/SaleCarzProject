@@ -18,13 +18,14 @@ import {MdbCarouselModule} from "mdb-angular-ui-kit/carousel";
 import { InsuranceproductComponent } from './insuranceproduct/insuranceproduct.component';
 import { InsurancedetailComponent } from './insurancedetail/insurancedetail.component';
 import { ContactComponent } from './contact/contact.component';
-import { GetquoteComponent } from './getquote/getquote.component';
+
 import {PaginationModule} from "@snoringarvind/pagination";
 import {HttpClientModule} from "@angular/common/http";
 import {InsurancecompaniesComponent} from "./insurancecompanies/insurancecompanies.component";
 import { InsurancevehiclesComponent } from './insurancevehicles/insurancevehicles.component';
 import {NgxPaginationModule} from "ngx-pagination";
 import {NewsComponent} from "./news/news.component";
+import { QnaComponent } from './qna/qna.component';
 
 
 
@@ -32,8 +33,8 @@ const appRoute: Routes = [
   {path:'',component:HomepageComponent},
   {path:'aboutus',component:AboutusComponent},
   {path:'contact',component:ContactComponent},
-  {path:'getquote',component:GetquoteComponent},
   {path:'products',component:InsuranceproductComponent},
+  {path:'qna',component:QnaComponent},
   {path:'news',component:NewsComponent},
   {path:'companies/:companyId',component:InsurancecompaniesComponent},
   {path:'vehicles/:vehicleId',component:InsurancevehiclesComponent},
@@ -53,9 +54,9 @@ const appRoute: Routes = [
     InsuranceproductComponent,
     InsurancedetailComponent,
     ContactComponent,
-    GetquoteComponent,
     InsurancecompaniesComponent,
     InsurancevehiclesComponent,
+    QnaComponent,
     ],
   imports: [
     BrowserModule, RouterModule.forRoot(appRoute),
