@@ -1,11 +1,11 @@
 <div class="container row" *ngFor="let dt of product" >
   <div class="title col-6">
-    <h2>{{dt.companyName}} {{dt.productName}} </h2>
+    <h2>{{dt.companyName | uppercase}} {{dt.productName | titlecase}} </h2>
     <fa-icon [icon]="faLocation"></fa-icon>
-    <h5>{{dt.address}}</h5>
+    <h5>{{dt.address | titlecase}}</h5>
     <fa-icon [icon]="faPhone"></fa-icon>
-    <h4>{{dt.hotline}}</h4>
-    <p>{{dt.description}}</p>
+    <h4>{{dt.phone}}</h4>
+    <p>{{dt.description }}</p>
   </div>
   <div class="logo col-6">
     <img src="{{dt.logo}}" alt="#"/>
@@ -18,13 +18,13 @@
   </div>
   <div class="benefit col-6">
     <h5><img src="assets/left-right.png" alt="#"/>INSURANCE BENEFIT<img src="assets/right-left.png" alt="#"/></h5>
-    <p>{{dt.insuranceBenefit}}</p>
+    <p>{{dt.insuranceBenefit }}</p>
     </div>
   </div>
 <div class="container row text-center" *ngFor="let dt of product">
   <div class="term">
     <h5><img src="assets/left-right.png" alt="#"/>COMPANY TERM<img src="assets/right-left.png" alt="#"/></h5>
-    <p>{{dt.term}}</p>
+    <p>{{dt.term }}</p>
   </div>
 </div>
 <div class="container row text-center">
@@ -43,7 +43,7 @@
   <div class="title col-9">
     <h2>Talk to our insurance experts</h2>
     <p>Contact our expert for more information</p>
-    <button routerLink="../contact">Get Insurance Now</button>
+    <button routerLink="/contact">Get Insurance Now</button>
   </div>
 
 </div>

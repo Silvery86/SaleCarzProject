@@ -38,15 +38,17 @@
 }
 .title p{
   font-size: 20px;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.8);
   width: 100%;
   line-height: 1.5;
 }
 .logo img{
   width:250px;
+  height: 200px;
   margin-top:50px;
   margin-left:200px;
   position: absolute;
+  border-radius: 20px;
 
 }
 .image img{
@@ -64,11 +66,12 @@ h5{
 li{
   font-size: 20px;
   line-height: 2;
-
 }
 p{
   font-size: 20px;
   color: rgba(0, 0, 0, 0.8);
+  line-height: 1.5;
+  padding:20px;
 }
 .contact{
   box-shadow: none;

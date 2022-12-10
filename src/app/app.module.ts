@@ -24,6 +24,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {InsurancecompaniesComponent} from "./insurancecompanies/insurancecompanies.component";
 import { InsurancevehiclesComponent } from './insurancevehicles/insurancevehicles.component';
 import {NgxPaginationModule} from "ngx-pagination";
+import {NewsComponent} from "./news/news.component";
 
 
 
@@ -33,6 +34,7 @@ const appRoute: Routes = [
   {path:'contact',component:ContactComponent},
   {path:'getquote',component:GetquoteComponent},
   {path:'products',component:InsuranceproductComponent},
+  {path:'news',component:NewsComponent},
   {path:'companies/:companyId',component:InsurancecompaniesComponent},
   {path:'vehicles/:vehicleId',component:InsurancevehiclesComponent},
   {path:'detail/:productId',component:InsurancedetailComponent}
