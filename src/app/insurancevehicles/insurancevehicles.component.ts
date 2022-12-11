@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, Input,  OnInit} from '@angular/core';
+import { ChangeDetectorRef, Component, Input} from '@angular/core';
 import { Observable} from "rxjs";
 import { Insurance} from "../interface/insurance.interface";
 import {HttpClient} from "@angular/common/http";

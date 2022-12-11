@@ -1,4 +1,4 @@
-import {Component, NgModule} from '@angular/core';
+import {Component} from '@angular/core';
 import {faLocationDot, faPhone} from '@fortawesome/free-solid-svg-icons';
 import {Insurance} from "../interface/insurance.interface";
 import {ActivatedRoute} from "@angular/router";
