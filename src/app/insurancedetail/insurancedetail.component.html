@@ -70,7 +70,7 @@
     </div>
   </div>
   <div class="FAQ">
-    <button routerLink="/qna">Read full FAQ</button>
+    <button>Read full FAQ</button>
   </div>
  </div>
 
@@ -81,8 +81,8 @@
 
       <ng-container *ngFor="let slide of company">
         <ng-template carouselSlide>
-          <a routerLink="/detail/{{slide.productId}}" data-target="html" class="scroll-to-target scroll-to-top" style="display: inline;" >
-            <h2 class="w-75" style="background-color:rgba(245,245,245,0.8); border-radius:20px; border:grey 1px solid; font-size: 25px; padding: 10px; height: 100px">{{slide.productName | titlecase}}</h2>
+          <a routerLink="/detail/{{slide.productId}}" (click)="toTop()" >
+            <h2 class="w-75" style="background-color:rgba(245,245,245,0.8); border-radius:20px; border:grey 1px solid; font-size: 25px; padding: 5px; height: 80px">{{slide.productName | titlecase}}</h2>
           <img class="w-75" style="background-color:rgba(245,245,245,0.8); border-radius:20px;border:grey 1px solid; height: 200px; padding: 10px" [src]="slide.pictureproduct" [alt]="slide.productName" [title]="slide.companyName">
           </a>
         </ng-template>

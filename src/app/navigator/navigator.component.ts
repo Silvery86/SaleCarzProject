@@ -29,7 +29,7 @@ export class NavigatorComponent implements OnInit {
     this.id1 = this.route.params.subscribe( params => {
       this.vehicleId = +params['vehicleId']
     })
-      const url1 = 'http://localhost:3333/g3-get-vehicles';
+      const url1 = 'http://139.180.186.20:3333/g3-get-vehicles';
       this.http.get<Vehicle[]>(url1).subscribe(data => {
         this.vehicle = data
       })
@@ -37,7 +37,7 @@ export class NavigatorComponent implements OnInit {
       this.id2 = this.route.params.subscribe( params => {
         this.companyId = +params['companyId']
       })
-    const url2 = 'http://localhost:3333/g3-get-companies';
+    const url2 = 'http://139.180.186.20:3333/g3-get-companies';
     this.http.get<Insurance[]>(url2).subscribe(data => {
       this.company = data
     })

@@ -53,7 +53,7 @@
       </p>
       <div class="row">
         <div class="col-4">
-          <button routerLink="aboutus">Discover More</button>
+          <button routerLink="aboutus" (click)="toTop()">Discover More</button>
         </div>
         <div class="col-8">
           <div class="contact-phone row">
@@ -87,7 +87,7 @@
     <div class="ourservices-product col-6">
       <img src="assets/carinsurance.png" alt="car insurance"/>
       <div class="detail">
-      <a routerLink="../products">
+      <a routerLink="/vehicles/2" (click)="toTop()">
         <h5>Cars Insurance</h5>
       </a>
       <p>Car Insurance with many special priorities helps perfectly protect your vehicle</p>
@@ -96,7 +96,7 @@
     <div class="ourservices-product col-6">
       <img src="assets/motobikeinsurance.jpeg" alt="motobike insurance"/>
       <div class="detail">
-        <a routerLink="../products">
+        <a routerLink="/vehicles/1" (click)="toTop()">
         <h5>Motobikes Insurance</h5>
         </a>
         <p>Motobikes Insurance with many special priorities helps perfectly protect your vehicle</p>
@@ -178,7 +178,7 @@
       <h2>Start tracking your claims</h2>
     </div>
     <div class="col-6 text-center">
-    <a routerLink="../contact">
+    <a routerLink="../contact" (click)="toTop()" >
       <button>TRACK YOUR CLAIM</button>
     </a>
     </div>

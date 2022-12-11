@@ -29,5 +29,6 @@ export class ContactComponent {
       alert("Thank you, We will contact you as soon as possible! Please check your email " + data.emailid + " for more imformation");
     }
   }
+
 }
 

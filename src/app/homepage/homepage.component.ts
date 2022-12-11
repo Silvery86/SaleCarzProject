@@ -34,5 +34,7 @@ export class HomepageComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  toTop(){
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+  }
 }

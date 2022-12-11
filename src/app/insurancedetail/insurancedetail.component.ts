@@ -68,8 +68,8 @@ export class InsurancedetailComponent {
     touchDrag: false,
     pullDrag: false,
     dots: false,
-    navSpeed: 200,
-    navText: ['', ''],
+    navSpeed: 600,
+    navText: ['<', '>'],
     responsive: {
       0: {
         items: 1
@@ -86,5 +86,7 @@ export class InsurancedetailComponent {
     },
     nav: true
   }
-
+  toTop(){
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+  }
 }
