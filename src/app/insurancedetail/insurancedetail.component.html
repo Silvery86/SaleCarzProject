@@ -76,6 +76,21 @@
 
 <div class="container related-product">
   <h5><img src="assets/left-right.png" alt="#"/>RELATED INSURANCE<img src="assets/right-left.png" alt="#"/></h5>
+  <div *ngFor="let dt of product"><h5>Other {{dt.companyName}} insurances</h5></div>
+  <owl-carousel-o [options]="customOptions">
+
+      <ng-container *ngFor="let slide of company">
+        <ng-template carouselSlide>
+          <a routerLink="/detail/{{slide.productId}}" data-target="html" class="scroll-to-target scroll-to-top" style="display: inline;" >
+            <h2 class="w-75" style="background-color:rgba(245,245,245,0.8); border-radius:20px; border:grey 1px solid; font-size: 25px; padding: 10px; height: 100px">{{slide.productName | titlecase}}</h2>
+          <img class="w-75" style="background-color:rgba(245,245,245,0.8); border-radius:20px;border:grey 1px solid; height: 200px; padding: 10px" [src]="slide.pictureproduct" [alt]="slide.productName" [title]="slide.companyName">
+          </a>
+        </ng-template>
+      </ng-container>
+
+
+
+  </owl-carousel-o>
 
 
 </div>

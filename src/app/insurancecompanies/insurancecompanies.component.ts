@@ -57,7 +57,7 @@ export class InsurancecompaniesComponent implements OnInit{
      this.id1 = this.route.params.subscribe(params =>{
       this.companyId = +params['companyId'];
       console.log(this.companyId)
-      const productUrl = 'http://localhost:3333/g3-insurance-by-company?companyId=' + this.companyId;
+      const productUrl = 'http://139.180.186.20:3333/g3-insurance-by-company?companyId=' + this.companyId;
       this.http.get<Insurance[]>(productUrl).subscribe(data =>{
         this.company = data;
       })

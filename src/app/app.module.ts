@@ -26,6 +26,8 @@ import { InsurancevehiclesComponent } from './insurancevehicles/insurancevehicle
 import {NgxPaginationModule} from "ngx-pagination";
 import {NewsComponent} from "./news/news.component";
 import { QnaComponent } from './qna/qna.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {CarouselModule} from "ngx-owl-carousel-o";
 
 
 
@@ -64,7 +66,8 @@ const appRoute: Routes = [
     FormsModule, MdbCollapseModule, MdbDropdownModule,
     NgbModule, NgImageSliderModule, MdbCarouselModule,
     PaginationModule, NgbPaginationModule,HttpClientModule,
-    ReactiveFormsModule, NgxPaginationModule,
+    ReactiveFormsModule, NgxPaginationModule, BrowserAnimationsModule,
+    CarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

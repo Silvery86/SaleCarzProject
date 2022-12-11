@@ -58,7 +58,7 @@ export class InsurancevehiclesComponent {
     this.id1 = this.route.params.subscribe(params =>{
       this.vehicleId = +params['vehicleId'];
       console.log(this.vehicleId)
-      const productUrl = 'http://localhost:3333/g3-insurance-by-vehicle?vehicleId=' + this.vehicleId;
+      const productUrl = 'http://139.180.186.20:3333/g3-insurance-by-vehicle?vehicleId=' + this.vehicleId;
       this.http.get<Insurance[]>(productUrl).subscribe(data =>{
         this.vehicle = data;
       })
