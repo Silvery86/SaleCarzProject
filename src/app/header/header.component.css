@@ -1,71 +1,39 @@
-.container .top-page-left{
-
-  width: 50%;
-  float: left;
-  box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-
-  height:60px;
-  font-size: 20px;
-  background-color: transparent;
-  padding:15px 0;
-}
-.container .top-page-right{
-  padding:8px 0;
-  width: 50%;
-  box-sizing: border-box;
-
-  height:50px;
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 25px;
-  background-color: transparent;
-}
-p{
-  margin-left: 20px;
-}
-.FAQ{
-  width:40%;
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 30px;
-
-
-}
-fa-icon{
-  font-size: 20px;
-
-  color: rgba(248, 248, 248, 0.9);
-  margin-left: 30px;
-}
-.socialmedia{
-  width:50%;
-  margin-left:20px;
-  display: flex;
-  flex-wrap: wrap;
-}
-.socialmedia fa-icon{
-  font-size:45px;
-  display:flex;
-
-  justify-content: center;
-  transition: rotate 2s;
-  cursor: pointer;
-}
-a{
-  color: rgba(248, 248, 248, 0.9);
-}
-.top-page-left fa-icon{
-  color: rgba(30, 121, 243, 0.8);
-  margin-right:5px;
-  font-size: 22px;
-}
-.socialmedia fa-icon:hover{
-  rotate: 360deg;
-}
 .container{
-  width:1200px;
-  margin: 0 auto;
-  padding:0;
+  display: flex;
+
+  padding :0;
+  flex-direction: row;
+  justify-content: center;
+  max-height: 50px;
+  width: 100%;
+  margin:0;
+  max-width: 100%;
 }
+.top-page-left{
+  width:42%;
+  margin: 0 2%;
+  padding: 2%;
+  max-height:50px;
+  display: flex;
+  flex-direction: row;
+}
+.top-page-left > div {
+  width: 50%;
+  font-size: 15px;
+  text-align: center;
+}
+.top-page-right{
+  width:42%;
+  margin: 0 2%;
+  padding: 2%;
+  max-height:50px;
+  display: flex;
+  flex-direction: row;
+}
+.top-page-right > div {
+  width: 50%;
+  font-size: 25px;
+  text-align: center;
+  max-height: 50px;
+}
+
