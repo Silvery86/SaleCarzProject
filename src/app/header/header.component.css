@@ -1,6 +1,5 @@
 .container{
   display: flex;
-
   padding :0;
   flex-direction: row;
   justify-content: center;
@@ -12,27 +11,29 @@
 .top-page-left{
   width:42%;
   margin: 0 2%;
-  padding: 2%;
+  padding: 0 2%;
   max-height:50px;
   display: flex;
   flex-direction: row;
   justify-items: center;
   align-items: center;
+  flex: 1 1 100px;
 }
 .top-page-left > div {
   width: 50%;
   font-size: 15px;
-  flex: 1 1 100px;
+
 }
 .top-page-right{
   width:42%;
   margin: 0 2%;
-  padding: 2%;
+  padding: 0 2%;
   max-height:50px;
   display: flex;
   flex-direction: row;
   justify-items: center;
   align-items: center;
+  flex: 1 1 100px;
 }
 .top-page-right > div {
   width: 50%;
@@ -46,3 +47,4 @@
   margin: 0 2%;
   font-size: 30px;
 }
+/* Media query */
