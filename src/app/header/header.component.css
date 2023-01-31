@@ -16,11 +16,13 @@
   max-height:50px;
   display: flex;
   flex-direction: row;
+  justify-items: center;
+  align-items: center;
 }
 .top-page-left > div {
   width: 50%;
   font-size: 15px;
-  text-align: center;
+  flex: 1 1 100px;
 }
 .top-page-right{
   width:42%;
@@ -29,11 +31,18 @@
   max-height:50px;
   display: flex;
   flex-direction: row;
+  justify-items: center;
+  align-items: center;
 }
 .top-page-right > div {
   width: 50%;
   font-size: 25px;
   text-align: center;
   max-height: 50px;
+  flex: 1 1 100px;
 }
-
+.top-page-right .socialmedia > fa-icon{
+  width: 20%;
+  margin: 0 2%;
+  font-size: 30px;
+}
