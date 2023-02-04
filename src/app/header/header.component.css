@@ -53,6 +53,9 @@
 {
   .container{
     flex-direction: column;
+
+    justify-items: center;
+    align-items: center;
   }
   .top-page-left{
     display: none;
@@ -67,6 +70,7 @@
 {
   .container{
     flex-direction: column;
+
   }
   .top-page-left{
     display: none;
@@ -75,4 +79,5 @@
     width: 100%;
     align-items: center;
   }
+
 }

@@ -1,10 +1,12 @@
 <div class="container">
+
+  <div class="logo">
+    <img src="assets/logo.jpg" alt="Logo"/>
+  </div>
   <div class="navigator">
-    <div class="logo">
-      <img src="assets/logo.jpg" alt="Logo"/>
-    </div>
     <div class="menu">
       <nav class="navbar navbar-expand-lg">
+
         <div class="container-fluid">
           <a class="navbar-brand nav-link" routerLink="">Home</a>
           <button
@@ -14,7 +16,7 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <i class="fas fa-bars"></i>
+            <i class="navbar-toggler-icon"></i>
           </button>
           <div
             class="collapse navbar-collapse"
@@ -23,6 +25,7 @@
             #basicNav="mdbCollapse"
           >
             <ul class="navbar-nav">
+
               <div ngbDropdown class="dropdown">
                 <button
                   class="btn btn-primary dropdown-toggle bg-transparent border-0 text-dark"
@@ -38,6 +41,7 @@
                   <li><a ngbDropdownItem class="dropdown-item" *ngFor="let co of company" routerLink="/companies/{{co.companyId}}">{{co.companyName}}</a></li>
                 </ul>
               </div>
+
               <div ngbDropdown class="dropdown">
                 <button
                   class="btn btn-primary dropdown-toggle bg-transparent border-0 text-dark"
@@ -53,9 +57,11 @@
                   <li><a ngbDropdownItem class="dropdown-item" *ngFor="let vh of vehicle" routerLink="/vehicles/{{vh.vehicleId}}">{{vh.vehicleType}}</a></li>
                 </ul>
               </div>
+
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" routerLink="contact">Contact</a>
               </li>
+
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" routerLink="aboutus">AboutUs</a>
               </li>
@@ -64,10 +70,13 @@
         </div>
       </nav>
     </div>
-    <div class="contact">
+  </div>
+  <div class="contact">
+    <div class="info">
       <fa-icon [icon]="faPhone"></fa-icon>
       <a href="tel:+1800-5555">Call 1800-5555</a>
       <p>Call to Our Experts</p>
     </div>
   </div>
 </div>
+
