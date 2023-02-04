@@ -16,20 +16,24 @@
   width: 100%;
   box-sizing: border-box;
   float:left;
+
 }
 .navigator{
   display: flex;
   align-items: center;
   justify-items: center;
-
 }
 .menu .navbar{
   border-radius: 10px;
   background-color: rgba(199, 199, 199, 0.27);
-  font-size: 15px;
-
-
+  font-size: var(--bs-navbar-brand-font-size);
 }
+.menu .btn{
+  font-size: var(--bs-navbar-brand-font-size);
+  justify-items: center;
+  align-items: center;
+}
+
 .contact{
   width:100%;
   display: flex;
@@ -47,7 +51,6 @@
   font-size: 15px;
 }
 .contact fa-icon{
-
   height: 50px;
   width: 50px;
   border: 2px solid deepskyblue;
@@ -94,18 +97,46 @@
   }
   .container > .logo{
     order: 1;
-
   }
   .container > .navigator{
     order: 3;
-
   }
   .container > div{
     flex: 1 1 100px;
     align-items: center;
     flex-wrap: nowrap;
   }
+  ul > li{
+    margin:0;
+  }
+  .navbar-nav{
+    justify-items: center;
+    align-items: center;
 
+  }
+  .navbar-nav > div{
+    flex: 1 1 50px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px rgba(0, 0, 0, 0.86) solid;
+  }
+  .navbar-nav > div:hover{
+    background-color: #a6b0b4;
+  }
+  .navbar-nav > li{
+    flex: 1 1 50px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px rgba(0, 0, 0, 0.86) solid;
+  }
+  .navbar-nav > li:hover{
+    background-color: #a6b0b4;
+  }
+  .dropdown ul > li > a{
+    text-align: center;
+    border-bottom: 1px slategrey solid;
+    font-size: 15px;
+  }
 }
 
 /* For mobile */
