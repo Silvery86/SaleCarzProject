@@ -19,3 +19,17 @@ mdb-carousel p{
   background-color: rgba(128, 128, 128, 0.5);
   border-radius: 10px;
 }
+/* For tablet*/
+@media only screen and (max-device-width: 991px)
+{
+  mdb-carousel img{
+    height: 400px;
+  }
+}
+/* For mobile */
+@media only screen and (max-device-width: 768px)
+{
+  mdb-carousel img{
+    height: 300px;
+  }
+}
