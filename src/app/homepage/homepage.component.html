@@ -2,7 +2,7 @@
   <div class="banner">
   <app-banner></app-banner>
   </div>
-
+<!--  Three benefit -->
   <div class="container .bg-secondary.bg-gradient">
     <div class="benefitall">
       <div class="benefit">
@@ -26,13 +26,12 @@
             <p>Get a fast and reliable quote from us today</p>
     </div>
   </div>
-
-  <div class="aboutus row">
-    <div class="img col-6">
+<!--About company-->
+  <div class="aboutus">
+    <div class="img">
       <div class="img1">
         <img src="assets/about1.jpeg" alt="about1"/>
       </div>
-
       <div class="img2">
         <img src="assets/about2.jpeg" alt="about2"/>
       </div>
@@ -40,39 +39,33 @@
         <img src="assets/20exp.png" alt="20exp"/>
       </div>
     </div>
-    <div class="detail col-6">
-      <h5><img src="assets/left-right.png" alt="#"/>ABOUT COMPANY<img src="assets/right-left.png" alt="#"/></h5>
-      <h2>We provide the best insurance policy</h2>
-      <h4>Insurance coverage refers to the kinds of protection available. Along with basic coverage under the policy, you can choose a number of add-ons to enhance the protection under the policies.</h4>
-      <ul>
-        <li>Third-Party Liability Only Cover</li>
-        <li>Collision Damage or Own Damage (OD) Cover</li>
-        <li>Personal Accident Cover</li>
-        <li>Zero Depreciation Insurance</li>
-        <li>Comprehensive Car Insurance</li>
-      </ul>
-      <p>
-        This type of coverage gives the highest level of protection as it includes liability for third parties, damage to own vehicle, personal accident cover, and all non-collision damage such as storms, floods, fire and theft. You can further enhance a comprehensive car insurance policy with a choice of add-ons.
-      </p>
-      <div class="row">
-        <div class="col-4">
-          <button routerLink="aboutus" (click)="toTop()">Discover More</button>
-        </div>
-        <div class="col-8">
-          <div class="contact-phone row">
-            <div class="col-2">
-              <fa-icon [icon]="faPhone"></fa-icon>
-            </div>
-            <div class="col-10">
-              <a href="tel:+1800-5555">Call 1800-5555</a>
-              <p>Call to Our Experts</p>
-            </div>
-
-          </div>
-        </div>
+    <div class="detail">
+      <div class="detail-content">
+        <h5><img src="assets/left-right.png" alt="#"/>ABOUT COMPANY<img src="assets/right-left.png" alt="#"/></h5>
+        <h2>We provide the best insurance policy</h2>
+        <h4>Insurance coverage refers to the kinds of protection available. Along with basic coverage under the policy, you can choose a number of add-ons to enhance the protection under the policies.</h4>
+        <ul>
+          <li>Third-Party Liability Only Cover</li>
+          <li>Collision Damage or Own Damage (OD) Cover</li>
+          <li>Personal Accident Cover</li>
+          <li>Zero Depreciation Insurance</li>
+          <li>Comprehensive Car Insurance</li>
+        </ul>
+        <p>
+          This type of coverage gives the highest level of protection as it includes liability for third parties, damage to own vehicle, personal accident cover, and all non-collision damage such as storms, floods, fire and theft. You can further enhance a comprehensive car insurance policy with a choice of add-ons.
+        </p>
       </div>
 
-
+      <div class="detail-button">
+        <div class="claim">
+          <button routerLink="aboutus" (click)="toTop()">Discover More</button>
+        </div>
+        <div class="contact-phone">
+            <fa-icon [icon]="faPhone"></fa-icon>
+            <a href="tel:+1800-5555">Call 1800-5555</a>
+            <p>Call to Our Experts</p>
+        </div>
+      </div>
     </div>
   </div>
 

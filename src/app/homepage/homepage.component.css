@@ -3,6 +3,26 @@
   margin: 0;
   width: 100%;
 }
+h5{
+  font-size: 25px;
+}
+h2{
+  font-size: 35px;
+  font-weight: 600;
+}
+h4{
+  font-size: 25px;
+  font-weight: 500;
+}
+li{
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+p{
+  font-size: 20px;
+  font-weight: 200;
+}
 .benefitall{
   background-color: transparent;
   display: flex;
@@ -33,12 +53,10 @@
 }
 .benefit h5{
   text-align: center;
-  font-size: 25px;
   flex: 1 1 100px;
 }
 .benefit p{
   text-align: center;
-  font-size: 15px;
   flex: 1 1 100px;
 }
 .benefit:nth-child(n){
@@ -57,32 +75,42 @@
 
 .aboutus{
   background-color: transparent;
-  border-radius: 10px;
-  height: max-content;
-  padding: 20px 0;
-  box-sizing: content-box;
-
+  display: flex;
+  flex-flow: row;
 }
 .aboutus .detail{
-  text-align: left;
-  padding:20px;
+  flex: 1 1 100px;
+  padding: 2%;
+}
+.aboutus .img{
+  flex: 1 1 100px;
+}
+.detail-content{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-around;
 
 }
-.aboutus .detail h5{
-  text-align: left;
+.detail-content > *{
+  flex: 1 1 content-box;
+  width: 100%;
+  padding:2%;
 }
-.aboutus .detail h2{
-  text-align: left;
-  font-size: 50px;
-  margin: 20px 0;
-  font-weight: 600;
+.detail-content > h5,li{
+  text-align: center;
 }
-.aboutus .detail h4{
-  text-align: left;
-  font-size: 25px;
-  margin: 20px 0;
-  font-weight: 500;
-  color: #006fdc;
+.detail-button{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: space-around;
+}
+.detail-button > *{
+  flex: 1 1 100px;
+
 }
 .aboutus .detail button{
   font-size: 20px;
@@ -91,37 +119,29 @@
   background-color: #006fdc;
   border-radius: 10px;
   transition: background-color 2s;
-  width: 200px;
-  margin-top:20px;
-}
-.aboutus .detail li{
-  margin:10px 0;
-  font-size: 15px;
-  font-weight: 500;
-}
-.aboutus .detail p{
-  margin:20px 0;
-  font-size: 18px;
-  font-weight: 200;
 }
 .aboutus .detail button:hover{
   background-color: rgba(0, 0, 68, 0.75);
 }
+.aboutus .img{
+  display: flex;
+  flex-flow: column;
+}
 .img1 img{
-  width:550px;
+  width:60%;
   float:right;
   border-radius: 50px;
 }
 .img2 img{
-  width:400px;
+  width:60%;
   float:left;
   border-radius: 50px;
   translate: -10px -80px;
 }
 .exp{
-  width:150px;
-  translate: 300px 400px;
-  position: absolute;
+  width:20%;
+  translate: 230% -350%;
+  position: relative;
 }
 .ourservices{
   padding:50px;
@@ -274,12 +294,6 @@
 .whychose-detail{
   z-index: 99;
 }
-h2{
-
-  font-size: 50px;
-  margin: 20px 0;
-  font-weight: 600;
-}
 .news-detail{
   padding:20px;
 }
@@ -399,10 +413,7 @@ h2{
   color: deepskyblue;
   font-size: 20px;
 }
-.contact-phone{
-  margin-top:25px;
-  margin-left: 20px;
-}
+
 /* Media query */
 /* For tablet*/
 @media only screen and (max-device-width: 991px)
@@ -411,6 +422,9 @@ h2{
     flex-flow: row wrap;
   }
   .benefit fa-icon:nth-child(1){
+    display: none;
+  }
+  .aboutus .detail .detail-content p,h4{
     display: none;
   }
 }
@@ -430,6 +444,12 @@ h2{
     flex: 1 1 100px;
   }
   .benefit p{
+    display: none;
+  }
+  .aboutus{
+    flex-flow: column;
+  }
+  .aboutus .img{
     display: none;
   }
 }
