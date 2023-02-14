@@ -103,14 +103,21 @@ p{
 }
 .detail-button{
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row;
   justify-content: center;
   align-items: center;
-  align-content: space-around;
+
 }
 .detail-button > *{
   flex: 1 1 100px;
-
+  display: flex;
+}
+.detail-button .claim{
+  justify-content: center;
+  align-items: center;
+}
+.detail-button .contact-phone{
+  flex-flow: column nowrap;
 }
 .aboutus .detail button{
   font-size: 20px;
@@ -202,133 +209,6 @@ p{
   font-size:20px;
   line-height: 1.8;
   color: rgba(0, 0, 0, 0.5);
-}
-.whychose {
-  margin-top:50px;
-
-  background-color: rgba(8, 36, 59, 0.9);
-  border-radius: 10px;
-  color: whitesmoke;
-  height:800px;
-  margin-bottom: 50px;
-  padding:60px;
-  z-index: -99;
-
-}
-.whychose-detail h5{
-  text-align: left;
-}
-.whychose-detail h2{
-  text-align: left;
-  font-size: 50px;
-  margin: 20px 0;
-  font-weight: 600;
-}
-.whychose-detail p{
-  font-size: 20px;
-  font-style: italic;
-  padding:10px;
-  color: rgba(231, 229, 229, 0.66);
-}
-
-.whychosse-icon{
-
-  width:calc(50% - 40px);
-  float:left;
-  height:180px;
-  margin:20px;
-  padding:20px;
-
-  border-radius: 10px;
-  background-color: rgba(6, 31, 51, 0.9);
-}
-.whychosse-icon fa-icon{
-  font-size: 45px;
-  color: rgba(44, 169, 225, 0.91);
-}
-.whychosse-icon .showing{
-  font-size: 25px;
-  color: rgba(255, 255, 255, 0.91);
-  margin-top: 20px;
-}
-.whychosse-icon .hidden{
-  font-size: 20px;
-  color: rgba(246, 246, 246, 0.91);
-  padding:10px;
-
-}
-.whychosse-icon .hidden{
-  display: none;
-
-}
-.whychosse-icon:hover .showing{
-  display: none;
-
-}
-.whychosse-icon:hover .hidden{
-  display: inline;
-}
-.scroll-to-top{
-  width: 45px;
-  height: 45px;
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  z-index: 99;
-  text-align: center;
-  border-radius: 50%;
-}
-.scroll-to-top fa-icon{
-  font-size: 45px;
-}
-*{
-  margin:0;
-}
-.why-chosse-one img{
-  width: 800px;
-  max-width: none;
-  translate: -150px -50px;
-  position: absolute;
-  z-index: 50;
-}
-.whychose-detail{
-  z-index: 99;
-}
-.news-detail{
-  padding:20px;
-}
-.new{
-  border: grey solid 1px;
-  margin:20px;
-  width: calc(33.33% - 40px);
-  border-radius: 30px;
-  padding: 0;
-  height:550px;
-
-}
-.new img{
-  width: 100%;
-  border-radius: 30px 30px 0 0;
-}
-.new h2{
-  font-size: 30px;
-  text-align: left;
-  padding:10px;
-  margin:5px;
-}
-.new p{
-  font-size: 20px;
-  color: #626262;
-  padding:10px;
-  height:90px;
-  overflow: hidden;
-}
-.new a{
-  cursor: pointer;
-  color: #4180ea;
-  font-size: 20px;
-  padding:10px;
-  margin-top:10px;
 }
 
 .container-contact .contact{
@@ -427,7 +307,15 @@ p{
   .aboutus .detail .detail-content p,h4{
     display: none;
   }
+  .aboutus .detail .detail-content h2{
+    text-align: center;
+  }
+  .detail-button .contact-phone{
+    justify-content: center;
+    align-items: center;
+  }
 }
+
 /* For mobile */
 @media only screen and (max-device-width: 768px)
 {
