@@ -151,51 +151,61 @@ p{
   position: relative;
 }
 .ourservices{
-  padding:50px;
   background-color: rgb(253, 253, 253);
   max-width: 100%;
   width:100%;
   margin:0;
 }
-.ourservices h5{
-  text-align: left;
-  margin-left:20px;
+.ourservices-content{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
 }
-.ourservices h2{
-  text-align: left;
-  font-size: 50px;
-  margin: 20px 0;
-  font-weight: 600;
+.ourservices-content > *{
+  flex: 1 1 100px;
+  text-align: center;
 }
 
+
 .ourservices-product{
-  width:calc(50% - 40px);
-  margin:20px;
-  border: #e0e0e0 solid 1px;
-  border-radius: 30px;
+  width: 100%;
+
   background-color: rgba(255, 255, 255, 0.58);
   padding:0;
+
+  display: flex;
+  flex-flow: row nowrap;
+}
+.ourservices-product > *{
+  flex: 1 1 100px;
+  margin: 2%;
+  border: #e0e0e0 solid 1px;
+  border-radius: 30px;
   box-shadow: rgba(107, 107, 107, 0.8) 1px 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
 }
 .ourservices-product img{
   width:100%;
   height: 300px;
   border-radius: 30px;
 }
-.ourservices .detail{
-  padding:10px;
-}
 .ourservices .detail h5{
-  margin-top: 20px;
   font-size: 30px;
   color: #1a55c7;
   font-weight: 500;
+  text-align: center;
+  padding:2%;
 }
 .ourservices .detail p{
   font-size: 20px;
   font-style: italic;
-  padding:20px;
+  text-align: center;
   color: rgba(0, 0, 0, 0.66);
+  padding:2%;
 }
 
 .ourservices-product fa-icon{
@@ -203,97 +213,6 @@ p{
   color: cornflowerblue;
   translate: 110px 50px;
 }
-.ourservices-detail p{
-  padding:10px;
-  margin-top:20px;
-  font-size:20px;
-  line-height: 1.8;
-  color: rgba(0, 0, 0, 0.5);
-}
-
-.container-contact .contact{
-  width: 1200px;
-  margin: 0 auto;
-  border: grey solid 1px;
-  height:200px;
-  background-color: rgba(47, 88, 215, 0.96);
-  border-radius: 20px 20px 0 0;
-  float:none;
-}
-.contact fa-icon{
-  font-size: 60px;
-  color:whitesmoke;
-  width: calc(30% - 30px);
-  float: left;
-  margin-top:50px;
-  margin-left:30px;
-}
-.contact h2{
-  font-size: 30px;
-  width: 70%;
-  float: left;
-  margin-top:70px;
-  color: whitesmoke;
-
-}
-.contact button{
-  padding:20px;
-  border-radius: 10px;
-  font-size: 20px;
-  font-weight: 500;
-  margin-top: 50px;
-  transition:background-color 2s;
-
-}
-.contact button:hover{
-  background-color: rgba(6, 31, 51, 0.9);
-  color: whitesmoke;
-}
-.contact{
-  width:calc(30% - 30px);
-  margin-top:70px;
-  margin-left:70px;
-  float:left;
-}
-.contact a{
-  font-size: 20px;
-}
-.contact p{
-  font-size: 15px;
-}
-.contact fa-icon{
-  position: relative;
-  height: 80px;
-  width: 80px;
-  border: 2px solid deepskyblue;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: deepskyblue;
-  font-size: 30px;
-}
-
-.contact-phone a{
-  font-size: 25px;
-}
-.contact-phone .col-10 p{
-  font-size: 15px;
-  margin:0;
-}
-.contact-phone fa-icon{
-  position: relative;
-  height: 50px;
-  width: 50px;
-  border: 2px solid deepskyblue;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: deepskyblue;
-  font-size: 20px;
-}
-
 /* Media query */
 /* For tablet*/
 @media only screen and (max-device-width: 991px)
@@ -313,6 +232,9 @@ p{
   .detail-button .contact-phone{
     justify-content: center;
     align-items: center;
+  }
+  .ourservices-content .ourservices-detail{
+    display: none;
   }
 }
 
@@ -339,5 +261,8 @@ p{
   }
   .aboutus .img{
     display: none;
+  }
+  .ourservices-product{
+    flex-flow: column nowrap;
   }
 }
