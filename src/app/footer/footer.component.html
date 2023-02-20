@@ -1,23 +1,30 @@
-<div class="container row">
-  <div class="info col-3">
+<div class="container">
+  <div class="info">
     <img src="assets/logo.jpg" alt="Logo"/>
     <p> Safe Carz Limited Company</p>
-    <fa-icon [icon]="faTwitter"></fa-icon>
-    <fa-icon [icon]="faFacebook"></fa-icon>
-    <fa-icon [icon]="faYoutube"></fa-icon>
-    <fa-icon [icon]="faInstargram"></fa-icon>
+    <div class="socialmedia">
+      <fa-icon [icon]="faTwitter"></fa-icon>
+      <fa-icon [icon]="faFacebook"></fa-icon>
+      <fa-icon [icon]="faYoutube"></fa-icon>
+      <fa-icon [icon]="faInstargram"></fa-icon>
+    </div>
   </div>
-  <div class="contact col-3">
+  <div class="contact">
     <h5>Contact</h5>
-    <fa-icon [icon]="faLocation"></fa-icon><span>Km 9, HaNoi, VietNam</span>
-    <br>
-    <fa-icon [icon]="faEnvelop"></fa-icon><span (click)="mailMe()"><a [href]="mailText"><span>Salecarz@ltd.com.vn</span></a></span>
-  </div>
-  <div class="gps col-3">
+    <div class="address">
+      <fa-icon [icon]="faLocation"></fa-icon>
+      <p>Km 9, HaNoi, VietNam</p>
+    </div>
+    <div class="email">
+      <fa-icon [icon]="faEnvelop"></fa-icon>
+      <span (click)="mailMe()"><a [href]="mailText"><p>Salecarz@ltd.com.vn</p></a></span>
+    </div>
+   </div>
+  <div class="gps">
     <h5>Location</h5>
     <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2312.2902023070355!2d106.66504701937478!3d10.783728284381727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ff24072db4b%3A0xac87c892d63f3312!2sSAFE%20CARZ%20Limited!5e0!3m2!1svi!2s!4v1670637025793!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
-  <div class="newsletter col-3">
+  <div class="newsletter">
     <h5>Newsletter</h5>
     <p>Subcribe our newsletter to get our latest update & news.</p>
     <form #emailsend = "ngForm" (ngSubmit) = "onClickSubmit(emailsend.value)">
