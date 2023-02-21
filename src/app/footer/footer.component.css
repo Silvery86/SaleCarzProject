@@ -11,8 +11,6 @@
 .container > *{
   flex: 1 1 100px;
   padding: 1%;
-  max-height: max-content;
-  flex-basis: 200px;
 }
 h5{
   font-size: 25px;
@@ -44,6 +42,10 @@ p{
   width:50%;
   border-radius: 50%;
 }
+.info p{
+  margin: 0;
+  text-align: center;
+}
 .socialmedia{
   width: 100%;
   display: flex;
@@ -53,7 +55,7 @@ p{
 
 }
 .info fa-icon{
-  display: flex;
+  text-align: center;
   flex:1 1 40px;
   font-size: 40px;
   transition: font-size 0.5s;
@@ -70,10 +72,19 @@ p{
   align-items: center;
 }
 .contact > *{
-  width: 100%;
+  flex: 1 1 50px;
+  text-align: center;
+}
+.contact .address,.email{
   display: flex;
   flex-flow: row nowrap;
-  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.contact p{
+  margin: 0;
+  padding: 0 2%;
 }
 .contact h5{
   text-align: center;
@@ -85,55 +96,100 @@ p{
 .contact span{
   font-size: 20px;
 }
+.gps{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+}
+.google{
+  border-radius: 20px;
+}
 .gps h5{
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-size: 30px;
+}
+.newsletter{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.newsletter > *{
+  flex: 1 1 max-content;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 2% 0;
+}
+.newsletter .sentmail{
+  display: flex;
+  flex-flow: row ;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.sentmail > *{
+  flex: 1 1 auto;
+}
+.sentmail input{
+  width: 200px;
 }
 .newsletter h5{
   text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-size: 30px;
-}
-.newsletter p{
-
-  font-size: 15px
 }
 .newsletter fa-icon{
   color: rgba(6, 102, 201, 0.95);
   font-size: 25px;
-
 }
 .newsletter a{
   font-size: 25px;
-  margin-left: 5px;
 }
 .newsletter input{
   font-size: 15px;
   color: rgba(255, 255, 255, 0.78);
   height: 60px;
-  width: 90%;
-  border: none;
-  outline: none;
-  padding-left: 20px;
-  padding-right: 60px;
   background-color: rgba(4, 23, 38, 0.9);
   border-radius: 10px;
   font-weight: 400;
 }
 .newsletter button{
   font-size: 15px;
-  width: 10%;
   border: none;
   background-color: transparent;
   border-radius: 10px;
-  padding:10px;
-  height: 60px;
-
 }
 .google-map{
   width:100%;
   height:250px;
+}
+/* Media query */
+/* For tablet*/
+@media only screen and (max-device-width: 991px)
+{
+  .newsletter{
+    display: none;
+  }
+}
+/* For mobile */
+@media only screen and (max-device-width: 768px)
+{
+  .gps{
+    display: none;
+  }
+  .container{
+    flex-flow: column nowrap;
+  }
+  .contact h5{
+    display: none;
+  }
+  .container > *{
+    flex-basis: 100px;
+  }
+  .info p{
+    font-size: 40px;
+  }
+  .info > *{
+    padding: 2% 0;
+  }
 }
